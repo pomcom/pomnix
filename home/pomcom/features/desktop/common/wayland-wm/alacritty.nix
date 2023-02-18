@@ -1,13 +1,7 @@
 { config, lib, pkgs, ... }:
 
-
 {
-
-  packages = with pkgs; [
-     alacritty
-  ];
-
-  programs.alacritty = {
+ programs.alacritty = {
     enable = true;
     settings = {
       env.TERM = "xterm-256color";
@@ -56,13 +50,6 @@
       ];
     };
   };
-
-  
-
-
-
-
-
 
     }
 

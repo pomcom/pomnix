@@ -4,12 +4,8 @@
 
 {
 
-  packages = with pkgs; [
-    rofi
-     
-  ];
 
-  programs.rofi = {
+ users.users.pomcom.packages.programs.rofi = {
     enable = true;
     terminal = "alacritty"; 
     theme = ./Adapta-Nokto.rasi;

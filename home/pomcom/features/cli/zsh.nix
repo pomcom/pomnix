@@ -2,10 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    exa
-  ];
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;

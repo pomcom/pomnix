@@ -3,10 +3,8 @@
 
 {
 #todo cleanup
-  packages = with pkgs; [
+  users.users.pomcom.packages = with pkgs; [
 
-    opensnitch
-    opensnitch-ui
     ferdium
     element-desktop	
     teams
@@ -14,15 +12,11 @@
     
     okular
 
-    ngrok
-    # grafana
 
     qutebrowser
     jdk17
     libreoffice
-    mitmproxy
     plantuml-c4
-    barrier
     
     sqlmap
     hakrawler
@@ -43,7 +37,6 @@
   
     drawio
     flameshot
-    lazygit
 
     wireshark
     termshark
@@ -52,10 +45,10 @@
     nmap
     amass
     testssl
-    jq
     gnupg
     glances
 
+    alacritty
     graphviz
     pprof
     

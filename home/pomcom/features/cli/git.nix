@@ -1,10 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  packages = with pkgs; [
-    git
-  ];
-
   programs.git = {
     #package = pkgs.gitAndTools.gitFull;
     enable = true;
@@ -16,5 +12,4 @@
       s = "status";
     };
   };
-
 }
