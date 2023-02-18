@@ -6,7 +6,7 @@
   imports =
     [
     ./tuxi/hardware-configuration.nix
-      # ../homemanager/home.nix
+       # ../homemanager/home.nix
     ];
 
 
