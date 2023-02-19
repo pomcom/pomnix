@@ -15,13 +15,17 @@
   networking.hostName = "tuxi";
   networking.networkmanager.enable = true;
 
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   services.dbus.packages = [ pkgs.gcr ];
 
+
   services.mullvad-vpn.enable = true;
+  services.udisks2.enable = true;
 
   powerManagement.powertop.enable = true;
 
@@ -29,9 +33,6 @@
     light.enable = true;
     adb.enable = true;
     dconf.enable = true;
-    kdeconnect.enable = true;
-    wireshark.enable = true;
-
   };
 
   security.polkit.enable = true;
@@ -44,10 +45,10 @@
 
 
   virtualisation.vmware.host.enable = true;
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-  virtualisation.virtualbox.guest.enable = true;
-  virtualisation.virtualbox.guest.x11 = true;
+  # virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enableExtensionPack = true;
+  # virtualisation.virtualbox.guest.enable = true;
+  # virtualisation.virtualbox.guest.x11 = true;
   virtualisation.docker.enable = true;
 
   xdg.portal = {

@@ -5,7 +5,7 @@
 # in
 {
   programs.firefox = {
-    enable = true;
+    enable = false;
     # profiles.misterio = {
     #   extensions = with addons; [
     #     ublock-origin

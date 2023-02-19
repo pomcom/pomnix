@@ -14,16 +14,15 @@
   home.packages = with pkgs; [
     grim
     imv
-    lyrics
     mimeo
-    primary-xwayland
+    # primary-xwayland
     pulseaudio
     slurp
     waypipe
     wf-recorder
     wl-clipboard
     wl-mirror
-    wl-mirror-pick
+    # wl-mirror-pick
     ydotool
   ];
 

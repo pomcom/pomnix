@@ -1,10 +1,8 @@
  ''
   general {
-    gaps_in=15
-    gaps_out=20
-    border_size=2.7
-    # col.active_border=0xff${colorscheme.colors.base0C}
-    # col.inactive_border=0xff${colorscheme.colors.base02}
+    gaps_in=4
+    gaps_out=8
+    border_size=1.0
     cursor_inactive_timeout=4
   }
   decoration {
@@ -40,22 +38,20 @@
     animation=workspaces,1,2,easeout,slide
   }
   dwindle {
-    # col.group_border_active=0xff${colorscheme.colors.base0B}
-    # col.group_border=0xff${colorscheme.colors.base04}
     split_width_multiplier=1.35
   }
   misc {
     no_vfr=false
   }
   input {
-    kb_layout=br
+    kb_layout=us,de
+    kb_options = grp:alt_space_toggle
     touchpad {
       disable_while_typing=false
     }
   }
   # Startup
   exec-once=waybar
-  exec=swaybg -i ${wallpaper} --mode fill
   exec-once=mako
   exec-once=swayidle -w
   # Mouse binding
@@ -68,7 +64,7 @@
   bind=SUPER,m,exec,$TERMINAL $SHELL -ic neomutt
   bind=SUPER,b,exec,$BROWSER
   bind=SUPER,x,exec,wofi -S drun -x 10 -y 10 -W 25% -H 60%
-  bind=SUPER,d,exec,wofi -S run
+  bind=SUPER,space,exec,wofi -S run
   bind=,Scroll_Lock,exec,pass-wofi # fn+k
   bind=,XF86Calculator,exec,pass-wofi # fn+f12
   # Toggle waybar
@@ -99,7 +95,7 @@
   bind=SHIFT,XF86AudioMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
   bind=,XF86AudioMicMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
   # Window manager controls
-  bind=SUPERSHIFT,q,killactive
+  bind=SUPER,q,killactive
   bind=SUPERSHIFT,e,exit
   bind=SUPER,s,togglesplit
   bind=SUPER,f,fullscreen,1

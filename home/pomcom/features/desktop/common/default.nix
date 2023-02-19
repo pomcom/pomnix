@@ -1,21 +1,21 @@
 { pkgs, lib, outputs, ... }:
 {
   imports = [
-    # ./deluge.nix
-    # ./discord.nix
-    # ./dragon.nix
-     ./firefox.nix
-    ./font.nix
-    ./gtk.nix
-    # ./kdeconnect.nix
-    ./pavucontrol.nix
-    # ./playerctl.nix
-    ./qt.nix
-    # ./sublime-music.nix
+# ./discord.nix
+    ./keepassxc.nix
+    ./obsidian.nix
+      ./firefox.nix
+      ./font.nix
+      ./gtk.nix
+      ./pavucontrol.nix
+      ./qt.nix
+      ./firefoxdev.nix
+      ./thunderbird.nix
+      ./apps.nix
   ];
 
   xdg.mimeApps.enable = true;
   home.packages = with pkgs; [
-    xdg-utils-spawn-terminal
+# xdg-utils-spawn-terminal
   ];
 }

@@ -20,8 +20,8 @@
   services.xsettingsd = {
     enable = true;
     settings = {
-      "Net/ThemeName" = "${gtk.theme.name}";
-      "Net/IconThemeName" = "${gtk.iconTheme.name}";
+      # "Net/ThemeName" = "${gtk.theme.name}";
+      # "Net/IconThemeName" = "${gtk.iconTheme.name}";
     };
   };
 }
