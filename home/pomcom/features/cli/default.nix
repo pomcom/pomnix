@@ -16,5 +16,9 @@
     ncdu
     ngrok
     ripgrep
+    htop
+    btop
+    gnumake
+    openvpn
   ];
 }

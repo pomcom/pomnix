@@ -2,8 +2,8 @@
 {
   imports = [
 # ./discord.nix
-    ./keepassxc.nix
-    ./obsidian.nix
+      ./keepassxc.nix
+      ./obsidian.nix
       ./firefox.nix
       ./font.nix
       ./gtk.nix
@@ -11,6 +11,7 @@
       ./qt.nix
       ./firefoxdev.nix
       ./thunderbird.nix
+      ./drawio.nix
       ./apps.nix
   ];
 

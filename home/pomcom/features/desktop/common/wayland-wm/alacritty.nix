@@ -6,7 +6,7 @@
     settings = {
       env.TERM = "xterm-256color";
       font = {
-        size = 11.0;
+        size = 14.0;
         normal = {
           famile = "Hack Nerd Font Mono";
           style = "Regular";
