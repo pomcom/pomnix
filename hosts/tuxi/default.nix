@@ -4,7 +4,8 @@
 
   imports =
     [
-    ./tuxi/hardware-configuration.nix
+    ./hardware-configuration.nix
+    # ./tuxi/hardware-configuration.nix
     ../common/global
     ../common/users/pomcom
     ];
