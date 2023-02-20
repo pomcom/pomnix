@@ -5,7 +5,6 @@
   imports =
     [
     ./hardware-configuration.nix
-    # ./tuxi/hardware-configuration.nix
     ../common/global
     ../common/users/pomcom
     ];
@@ -15,8 +14,7 @@
   networking.hostName = "tuxi";
   networking.networkmanager.enable = true;
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
@@ -44,9 +42,10 @@
   };
 
 
-  virtualisation.vmware.host.enable = true;
-  # virtualisation.virtualbox.host.enable = true;
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
+  # virtualisation.vmware.host.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "pomcom" ];
+  virtualisation.virtualbox.host.enableExtensionPack = true;
   # virtualisation.virtualbox.guest.enable = true;
   # virtualisation.virtualbox.guest.x11 = true;
   virtualisation.docker.enable = true;
