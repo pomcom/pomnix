@@ -7,7 +7,8 @@
       okular
       element-desktop
       discord
-      flameshot
       spotify
+      mullvad-vpn
+      flameshot
   ];
 }

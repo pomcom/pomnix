@@ -20,5 +20,12 @@
     btop
     gnumake
     openvpn
+    wget
+    gcc
+    p7zip
+    unzip
+    killall
+    cargo
+    neofetch
   ];
 }

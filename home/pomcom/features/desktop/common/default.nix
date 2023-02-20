@@ -2,9 +2,8 @@
 {
   imports = [
 # ./discord.nix
-      ./keepassxc.nix
+    ./keepassxc.nix
       ./obsidian.nix
-      ./firefox.nix
       ./font.nix
       ./gtk.nix
       ./pavucontrol.nix
