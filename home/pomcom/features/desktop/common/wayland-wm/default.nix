@@ -24,11 +24,16 @@
     wl-mirror
     # wl-mirror-pick
     ydotool
+    rofi-wayland
   ];
 
   home.sessionVariables = {
     MOZ_ENABLE_WAYLAND = 1;
     QT_QPA_PLATFORM = "wayland";
     LIBSEAT_BACKEND = "logind";
+    TERMINAL = "alacritty";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+
   };
 }
