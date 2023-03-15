@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ../common/global
     ../common/users/pomcom
+    ../common/opt/pipewire.nix
     ];
 
   services.greetd.settings.default_session.user = "pomcom";
@@ -33,7 +34,7 @@
     dconf.enable = true;
   };
 
-  security.polkit.enable = true;
+  # security.polkit.enable = true;
   hardware.bluetooth.enable = true;
 
   services.logind ={
@@ -42,7 +43,9 @@
   };
 
 
-  # virtualisation.vmware.host.enable = true;
+  virtualisation.vmware.host.enable = true;
+  # virtualisation.vmware.host.package = pkgs.my-vmware-workstation;
+
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "pomcom" ];
   virtualisation.virtualbox.host.enableExtensionPack = true;
@@ -93,18 +96,9 @@
 
 
 # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   sound.mediaKeys.enable = true;
   hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-# If you want to use JACK applications, uncomment this
-#jack.enable = true;
-  };
 
 
   fonts.fonts = with pkgs; [

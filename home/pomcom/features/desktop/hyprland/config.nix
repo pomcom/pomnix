@@ -1,9 +1,11 @@
  ''
   general {
-    gaps_in=4
-    gaps_out=8
+    gaps_in=2
+    gaps_out=4
     border_size=1.0
-    cursor_inactive_timeout=4
+    col.active_border = rgb(3c6f2f)
+    col.inactive_border = rgba(595959aa)
+    cursor_inactive_timeout=0
   }
   decoration {
     active_opacity=0.94
@@ -45,18 +47,24 @@
   }
   input {
     kb_layout=us,de
-    kb_options = grp:alt_space_toggle
+    kb_options =ctrl:nocaps,grp:alt_space_toggle,
     touchpad {
-      disable_while_typing=false
+      natural_scroll=true
+      disable_while_typing=true
+      tap-to-click=true
+      clickfinger_behavior=true
     }
   }
   # Startup
   exec-once=waybar
   exec-once=mako
   exec-once=swayidle -w
+  exec-once=nm-applet --indicator
+
   # Mouse binding
   bindm=SUPER,mouse:272,movewindow
   bindm=SUPER,mouse:273,resizewindow
+  
   # Program bindings
   bind=SUPER,Return,exec,$TERMINAL
   bind=SUPER,w,exec,makoctl dismiss
@@ -67,17 +75,21 @@
   bind=SUPER,space,exec,wofi -S run
   bind=,Scroll_Lock,exec,pass-wofi # fn+k
   bind=,XF86Calculator,exec,pass-wofi # fn+f12
+  
   # Toggle waybar
   bind=,XF86Tools,exec,pkill -USR1 waybar # profile button
+
   # Lock screen
   bind=,XF86Launch5,exec,swaylock -S
   bind=,XF86Launch4,exec,swaylock -S
+
   # Screenshots
   bind=,Print,exec,grimblast --notify copy output
   bind=SHIFT,Print,exec,grimblast --notify copy active
   bind=CONTROL,Print,exec,grimblast --notify copy screen
   bind=SUPER,Print,exec,grimblast --notify copy window
   bind=ALT,Print,exec,grimblast --notify copy area
+
   # Keyboard controls (brightness, media, sound, etc)
   bind=,XF86MonBrightnessUp,exec,light -A 10
   bind=,XF86MonBrightnessDown,exec,light -U 10
@@ -94,6 +106,7 @@
   bind=,XF86AudioMute,exec,pactl set-sink-mute @DEFAULT_SINK@ toggle
   bind=SHIFT,XF86AudioMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
   bind=,XF86AudioMicMute,exec,pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
   # Window manager controls
   bind=SUPER,q,killactive
   bind=SUPERSHIFT,e,exit

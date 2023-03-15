@@ -10,6 +10,8 @@ in
       "wheel"
       "video"
       "audio"
+      "vmware"
+
     ] ++ ifTheyExist [
       "network"
       "wireshark"

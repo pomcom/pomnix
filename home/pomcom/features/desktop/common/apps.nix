@@ -9,6 +9,13 @@
       discord
       spotify
       mullvad-vpn
-      flameshot
+      signal-desktop
+
+      polkit_gnome
+      # move 
+      texlive.combined.scheme-full
+      texmaker
+      networkmanagerapplet
+      vlc
   ];
 }

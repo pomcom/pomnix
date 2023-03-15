@@ -9,7 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/hyprland/v0.21.0beta";
+     hyprland.url = "github:hyprwm/hyprland/v0.21.0beta";
+    # hyprland.url = "github:hyprwm/Hyprland";
+
     hyprwm-contrib.url = "github:hyprwm/contrib";
   };
 

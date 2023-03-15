@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{config, pkgs, inputs, ... }: {
   fontProfiles = {
     enable = true;
     monospace = {

@@ -14,7 +14,7 @@
   home.packages = with pkgs; [
     grim
     imv
-    mimeo
+    mime
     # primary-xwayland
     pulseaudio
     slurp
@@ -25,6 +25,7 @@
     # wl-mirror-pick
     ydotool
     rofi-wayland
+    blueman
   ];
 
   home.sessionVariables = {
@@ -34,6 +35,7 @@
     TERMINAL = "alacritty";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_DESKTOP = "Hyprland";
+    # GTK_THEME="Adwaita:dark";
 
   };
 }
