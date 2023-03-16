@@ -22,6 +22,7 @@
     inputs.hyprwm-contrib.packages.${system}.grimblast
     swaybg
     swayidle
+    hyprpaper
   ];
 
   programs.waybar.package = pkgs.waybar.overrideAttrs (oa: {
@@ -41,4 +42,13 @@
     #     inherit (config) colorscheme wallpaper;
     #   });
   };
+
+  xdg.configFile = {
+      wallpapers = {
+        source = ../../resources/Wallpapers;
+        recursive = true;
+
+        };
+
+    };
 }

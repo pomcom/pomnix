@@ -35,6 +35,19 @@
   };
 
   # security.polkit.enable = true;
+
+  # security.pki.certificateFiles = [
+  #   "${pkgs.cacert}/etc/ssl/certs/Spike+Rocks+CA.crt"
+  #   "${pkgs.cacert}/etc/ssl/certs/spike.local+intermediate+CA.crt"
+  #
+  # ];
+
+  networking.extraHosts = 
+  ''
+    10.12.12.5 seafile.spike.local
+
+  
+  '';
   hardware.bluetooth.enable = true;
 
   services.logind ={
@@ -57,6 +70,7 @@
     enable = true;
     wlr.enable = true;
   };
+
   hardware = {
     opengl = {
       enable = true;

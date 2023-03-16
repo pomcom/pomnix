@@ -17,5 +17,7 @@
       texmaker
       networkmanagerapplet
       vlc
+
+
   ];
 }

@@ -14,7 +14,7 @@
   home.packages = with pkgs; [
     grim
     imv
-    mime
+    # mime
     # primary-xwayland
     pulseaudio
     slurp
@@ -26,6 +26,9 @@
     ydotool
     rofi-wayland
     blueman
+    lxappearance
+    flameshot
+
   ];
 
   home.sessionVariables = {
