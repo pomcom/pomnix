@@ -41,5 +41,6 @@ vim.keymap.set('n', '<leader>ff', M.find_files)
 vim.keymap.set('n', '<leader>fp', M.find_home_files)
 vim.keymap.set('n', '<leader>fb', builtin.buffers)
 vim.keymap.set('n', '<leader>fh', builtin.help_tags)
+vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 -- LSP Keybindings
 vim.keymap.set('n', 'gr', M.lsp_find_references)

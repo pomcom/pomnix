@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     exa
     fd
+    lsof
     httpie
     jq
     lazygit
@@ -27,5 +28,9 @@
     killall
     cargo
     neofetch
+    file
+    #auslagern?
+    nmap
+    
   ];
 }

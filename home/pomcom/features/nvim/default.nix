@@ -4,25 +4,14 @@
   programs.neovim = {
 
     enable = true;
+    defaultEditor = true;
+    package = pkgs.neovim-nightly;
 
     viAlias = true;
     vimdiffAlias = true;
 
     withNodeJs = true;
     withPython3 = true;
-
-    plugins = with pkgs.vimPlugins; [
-      # TODO: install plugins via nix
-      # vim-surround
-      # vim-repeat
-      # fugitive
-      # vim-table-mode
-      # plenary-nvim
-      # telescope-nvim
-      # nvim-treesitter
-      # nvim-lspconfig
-      # nvim-webdev-icons
-    ];
 
     extraPackages = with pkgs; [
       # Language Servers
@@ -39,6 +28,5 @@
      source = ./config/nvim;
      recursive = true;
    };
-    # TODO: pre-install treesitter grammars
   };
 }

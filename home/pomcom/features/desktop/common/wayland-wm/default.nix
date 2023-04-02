@@ -38,7 +38,7 @@
     TERMINAL = "alacritty";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_DESKTOP = "Hyprland";
-    # GTK_THEME="Adwaita:dark";
+    GTK_THEME="Adwaita:dark";
 
   };
 }

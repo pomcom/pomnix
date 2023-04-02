@@ -11,7 +11,9 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "rtsx_usb_sdmmc" ];
   boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+      v4l2loopback # This is needed for obs virtual cam to work
+    ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/700d343e-a7d5-4b46-b8a7-6e3b0889a286";

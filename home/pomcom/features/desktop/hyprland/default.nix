@@ -44,11 +44,19 @@
   };
 
   xdg.configFile = {
-      wallpapers = {
-        source = ../../resources/Wallpapers;
-        recursive = true;
-
-        };
-
+    wallpapers = {
+      source = ../../../resources/Wallpapers;
+      recursive = true;
     };
+  };
+
+  xdg.configFile = {
+    "hypr/hyprpaper.conf" = {
+      text = ''
+        preload = ~/.config/wallpapers/nasa-3440x1440.jpg
+        # wallpaper = eDP-1,~/.config/wallpapers/nasa-3440x1440.jpg
+        wallpaper = HDMI-A-1,~/.config/wallpapers/nasa-3440x1440.jpg
+      '';
+    };
+  };
 }

@@ -8,7 +8,7 @@ local auto_setup_servers = {
   'pyright',
   'rnix',
   'gopls',
-  'sumneko_lua',
+  'lua_ls',
   'texlab',
 }
 

@@ -12,6 +12,7 @@
       ./thunderbird.nix
       ./drawio.nix
       ./apps.nix
+      ./obs.nix
   ];
 
   xdg.mimeApps.enable = true;

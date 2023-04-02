@@ -4,6 +4,8 @@
 # custom packages from the 'pkgs' directory
   additions = final: _prev: import ../pkgs { pkgs = final; };
 
+  neovim-nightly = inputs.neovim-nightly-overlay.overlay;
+
   modifications = final: prev: {
 
     flameshot = prev.flameshot.overrideAttrs (old: {

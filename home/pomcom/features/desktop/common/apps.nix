@@ -1,4 +1,3 @@
-
 { pkgs, ... }: {
   home.packages = with pkgs; [
       chromium
@@ -11,13 +10,11 @@
       mullvad-vpn
       signal-desktop
 
-      polkit_gnome
+      # polkit_gnome
       # move 
       texlive.combined.scheme-full
       texmaker
       networkmanagerapplet
       vlc
-
-
   ];
 }

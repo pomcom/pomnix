@@ -1,4 +1,4 @@
- ''
+ ''config.nix
   general {
     gaps_in=2
     gaps_out=4
@@ -6,7 +6,6 @@
     col.active_border = rgb(3c6f2f)
     col.inactive_border = rgba(595959aa)
     cursor_inactive_timeout=0
-    $w1 = hyprctl hyprpaper wallpaper "HDMI-A-1, ../../../resources/Wallpapers/nasa-3440x1440.jpg"
   }
   decoration {
     active_opacity=0.94
@@ -56,6 +55,7 @@
       clickfinger_behavior=true
     }
   }
+$w1 = hyprctl hyprpaper wallpaper "HDMI-A-1, ../../../resources/Wallpapers/nasa-3440x1440.jpg"
   # Startup
   exec-once=waybar
   exec-once=flameshot
@@ -63,7 +63,7 @@
   exec-once=swayidle -w
   exec-once=mullvad-gui
   exec-once=nm-applet --indicator
-  exec-once-$w1
+  exec-once=$w1
 
 
   # Mouse binding

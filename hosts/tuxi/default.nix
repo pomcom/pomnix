@@ -8,6 +8,7 @@
     ../common/global
     ../common/users/pomcom
     ../common/opt/pipewire.nix
+    ../common/opt/polkit.nix
     ];
 
   services.greetd.settings.default_session.user = "pomcom";
@@ -22,7 +23,6 @@
 
   services.dbus.packages = [ pkgs.gcr ];
 
-
   services.mullvad-vpn.enable = true;
   services.udisks2.enable = true;
 
@@ -34,7 +34,6 @@
     dconf.enable = true;
   };
 
-  # security.polkit.enable = true;
 
   # security.pki.certificateFiles = [
   #   "${pkgs.cacert}/etc/ssl/certs/Spike+Rocks+CA.crt"
@@ -69,6 +68,10 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
+    extraPortals =  [
+       pkgs.xdg-desktop-portal-hyprland
+    ];
+
   };
 
   hardware = {
@@ -118,10 +121,6 @@
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
   ];
-
-
-
-
 
 
   system.stateVersion = "22.05";

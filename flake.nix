@@ -10,9 +10,10 @@
     };
 
      hyprland.url = "github:hyprwm/hyprland/v0.21.0beta";
-    # hyprland.url = "github:hyprwm/Hyprland";
 
     hyprwm-contrib.url = "github:hyprwm/contrib";
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
  outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -33,7 +34,6 @@
       devShells = forEachPkgs (pkgs: import ./shell.nix { inherit pkgs; });
       formatter = forEachPkgs (pkgs: pkgs.nixpkgs-fmt);
 
-
 # NixOS configuration entrypoint
 # Available through 'nixos-rebuild --flake .#your-hostname'
 
@@ -45,12 +45,8 @@
         };
       };
 
-    
-
-
 # Standalone home-manager configuration entrypoint
 # Available through 'home-manager --flake .#your-username@your-hostname'
-
 
       homeConfigurations = {
         "pomcom@tuxi" = home-manager.lib.homeManagerConfiguration {
