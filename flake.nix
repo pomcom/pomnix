@@ -36,6 +36,8 @@
 
 # NixOS configuration entrypoint
 # Available through 'nixos-rebuild --flake .#your-hostname'
+# nixos-rebuild build --flake .#your-hostname
+# nixos-rebuild switch --flake .#otvechat
 
       nixosConfigurations = {
 
@@ -43,6 +45,9 @@
           specialArgs = { inherit inputs outputs; };
           modules = [ ./hosts/tuxi ];
         };
+        otvechat = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./hosts/otvechat];
       };
 
 # Standalone home-manager configuration entrypoint
@@ -56,5 +61,6 @@
         };
       };
     };
+  };
 }
 

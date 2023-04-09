@@ -1,0 +1,93 @@
+
+{ config, pkgs, lib, inputs, user, outputs,  ... }:
+
+{
+
+  imports = [
+    ./hardware-configuration.nix
+
+    ./plasma-i3
+
+    ../common/global
+    ../common/users/pomcom
+
+    ../common/opt/virtualisation.nix
+  ];
+
+
+  networking = {
+    hostName = "otvechat";
+    networkmanager.enable = true;
+  };
+
+  services = {
+    dbus.packages = [ pkgs.gcr ];
+
+    printing.enable = true;
+
+    mullvad-vpn.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+  };
+
+  # Enable sound with pipewire.
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+
+  security.rtkit.enable = true;
+
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
+    };
+  };
+
+  boot.initrd = {
+    secrets = {
+      "/crypto_keyfile.bin" = null;
+    };
+    luks.devices."luks-a5f275df-2aeb-424f-aff8-2c1988c84ac1" = {
+      device = "/dev/disk/by-uuid/a5f275df-2aeb-424f-aff8-2c1988c84ac1";
+      keyFile = "/crypto_keyfile.bin";
+    };
+  };
+
+  programs = {
+    light.enable = true;
+    adb.enable = true;
+    dconf.enable = true;
+  };
+ 
+
+
+  system.stateVersion = "22.05";
+
+  # TODO: Remove commented code
+
+  # security.pki.certificateFiles = [
+  #   "${pkgs.cacert}/etc/ssl/certs/Spike+Rocks+CA.crt"
+  #   "${pkgs.cacert}/etc/ssl/certs/spike.local+intermediate+CA.crt"
+  #
+  # ];
+
+  # networking.extraHosts = ''
+  #   10.12.12.5 seafile.spike.local
+  # '';
+
+  #  hardware = {
+  #    opengl = {
+  #      enable = true;
+  #      extraPackages = with pkgs; [ amdvlk ];
+  #      driSupport = true;
+  #      driSupport32Bit = true;
+  #    };
+  #  };
+
+}
+

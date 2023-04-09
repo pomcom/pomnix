@@ -14,7 +14,6 @@
     extraSpecialArgs = { inherit inputs outputs; };
   };
   
-
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
     config = {
@@ -30,8 +29,7 @@
   };
 
   programs.fuse.userAllowOther = true;
-  hardware.enableRedistributableFirmware = true;
-  # networking.domain = "m7.rs";
+  hardware.enableRedistributableFirmware = false; #enabling this breaks mxmaster
 
   # Increase open file limit for sudoers
   # security.pam.loginLimits = [
