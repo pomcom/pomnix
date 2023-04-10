@@ -17,6 +17,7 @@
     ncdu
     ngrok
     ripgrep
+    atuin
     htop
     btop
     gnumake
@@ -33,4 +34,10 @@
     nmap
     
   ];
+
+
+  programs.atuin = {
+    enable = true;
+  };
+
 }
