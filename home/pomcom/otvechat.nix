@@ -10,6 +10,8 @@
       kde-gruvbox
       vscode
 
+      libsForQt5.kalendar
+
       gitkraken
       libreoffice-qt
       hunspell
