@@ -3,10 +3,17 @@
     ./global
      ./features/services/picom.nix
      ./features/desktop/i3/config.nix
+     
+
+     ./features/desktop/common/flameshot.nix
+     ./features/desktop/common/obsidian.nix
+     ./features/desktop/common/keepassxc.nix
+     ./features/desktop/common/firefoxdev.nix
+
+
   ];
 
   home.packages = with pkgs; [
-      firefox
       kde-gruvbox
       vscode
 
@@ -20,7 +27,6 @@
 
       alacritty
       ferdium
-      keepassxc
       nomachine-client
 
       chromium
