@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     keepmenu
     i3status
+    autotiling
   ];
 
   programs.rofi = {
@@ -46,6 +47,7 @@
         } ];
 
       startup =[
+        # {command = "exec_always autotiling";}
         # { command = "alacritty"; }
       ];
 
