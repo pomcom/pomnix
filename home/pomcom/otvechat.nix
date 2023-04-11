@@ -2,6 +2,7 @@
   imports = [
     ./global
      ./features/services/picom.nix
+     ./features/services/nextcloud.nix
      ./features/desktop/i3/config.nix
      
 
@@ -10,7 +11,6 @@
      ./features/desktop/common/keepassxc.nix
      ./features/desktop/common/firefoxdev.nix
 
-
   ];
 
   home.packages = with pkgs; [
@@ -18,6 +18,8 @@
       vscode
 
       libsForQt5.kalendar
+      libsForQt5.bluedevil
+      bluez5
 
       gitkraken
       libreoffice-qt
@@ -28,6 +30,8 @@
       alacritty
       ferdium
       nomachine-client
+      seafile-client
+      spotify
 
       chromium
       kate

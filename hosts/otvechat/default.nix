@@ -20,6 +20,10 @@
     networkmanager.enable = true;
   };
 
+
+   networking.extraHosts = ''
+     10.12.12.5 seafile.spike.local
+   '';
   services = {
     dbus.packages = [ pkgs.gcr ];
 
@@ -36,7 +40,11 @@
 
   # Enable sound with pipewire.
   sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  hardware = {
+    pulseaudio.enable = false;
+    bluetooth.enable = true;
+
+    };
 
   security.rtkit.enable = true;
 

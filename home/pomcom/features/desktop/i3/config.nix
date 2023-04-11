@@ -2,7 +2,6 @@
 
 {
 
-
   home.packages = with pkgs; [
     keepmenu
     i3status
@@ -72,6 +71,7 @@
            # "${mod}+space" = "exec env PATH=\"${systemPath}\" ${pkgs.rofi}/bin/rofi -show run";
 
           "${mod}+m" = "exec ${pkgs.rofi}/bin/rofi -show";
+          "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
           "${mod}+${left}" = "focus left";
           "${mod}+${down}" = "focus down";
           "${mod}+${up}" = "focus up";
