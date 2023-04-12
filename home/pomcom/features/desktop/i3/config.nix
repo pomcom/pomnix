@@ -1,6 +1,7 @@
 { config, lib, pkgs, user, ... }:
 
 {
+#TODO: fix env variable to avoid shortcut workaround 
 
   home.packages = with pkgs; [
     keepmenu
@@ -10,7 +11,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = "purple";
+    theme = "android_notification";
   };
 
   
@@ -21,7 +22,6 @@
     config = rec {
       modifier = "Mod4";
       terminal = "Alacritty";
-      menu = "rofi -show run";
 
       gaps = {
         inner = 5;
@@ -71,7 +71,7 @@
            # "${mod}+space" = "exec env PATH=\"${systemPath}\" ${pkgs.rofi}/bin/rofi -show run";
 
           "${mod}+m" = "exec ${pkgs.rofi}/bin/rofi -show";
-          "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
+          # "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
           "${mod}+${left}" = "focus left";
           "${mod}+${down}" = "focus down";
           "${mod}+${up}" = "focus up";
