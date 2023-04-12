@@ -4,8 +4,8 @@
     ../xorg
   ];
 
-  services.xserver = { 
-    displayManager = { 
+  services.xserver = {
+    displayManager = {
       sddm.enable = true;
       defaultSession = "plasma+i3+otvechat";
       session = [
@@ -17,9 +17,9 @@
       ];
     };
     desktopManager.plasma5.enable = true;
-     # windowManager.i3 = {
-     #   enable = true;
-     # };
+    # windowManager.i3 = {
+    #   enable = true;
+    # };
   };
 
   systemd = {
@@ -38,7 +38,7 @@
     };
   };
 
-   environment.systemPackages = [
+  environment.systemPackages = [
     pkgs.xorg.xf86videointel
   ];
 }
