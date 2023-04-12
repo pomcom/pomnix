@@ -30,6 +30,7 @@
     cargo
     neofetch
     file
+    gnupg
     #auslagern?
     nmap
     
