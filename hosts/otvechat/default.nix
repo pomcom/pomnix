@@ -24,6 +24,7 @@
    networking.extraHosts = ''
      10.12.12.5 seafile.spike.local
    '';
+
   services = {
     dbus.packages = [ pkgs.gcr ];
 
@@ -71,6 +72,13 @@
     adb.enable = true;
     dconf.enable = true;
   };
+
+  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  plasma-browser-integration
+  kwallet
+  kwalletmanager
+
+];
  
 
 
