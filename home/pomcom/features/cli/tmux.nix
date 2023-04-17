@@ -5,6 +5,8 @@
     enable = true;
     prefix = "C-f";
     historyLimit = 50000;
+    terminal = "screen-256color";
+    escapeTime = 1;
     extraConfig = ''
 
     # move around panes with hjkl
