@@ -4,9 +4,12 @@
     ./git.nix
     ./zsh.nix
     ./tmux.nix
+    ./pentest.nix
+    ./compression.nix
   ];
 
   home.packages = with pkgs; [
+
     exa
     fd
     lsof
@@ -17,28 +20,28 @@
     ncdu
     ngrok
     ripgrep
-    atuin
     htop
     btop
     gnumake
     openvpn
     wget
     gcc
-    p7zip
-    unzip
     killall
-    cargo
     neofetch
     file
+
     gnupg
-    #auslagern?
-    nmap
-    
+    openssl
+    sops
+
   ];
 
 
   programs.atuin = {
     enable = true;
+      flags = [
+      "--disable-up-arrow"
+    ];
   };
 
 }
