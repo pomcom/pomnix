@@ -1,8 +1,8 @@
-{config, lib, pkgs, user, ... }:
+{ config, lib, pkgs, user, ... }:
 {
-services.picom = {
+  services.picom = {
     enable = true;
     vSync = true;
-     backend = "glx";
+    backend = "glx";
   };
 }

@@ -2,8 +2,8 @@
 {
   imports = [
     ../features/cli
-    ../features/starter
-    # ../features/nvim
+    ../features/dev
+     ../features/nvim
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {

@@ -137,12 +137,13 @@ return {
   { import = "lazyvim.plugins.extras.lang.typescript" },
 
   -- add more treesitter parsers
+  -- add vimdoc again, after 
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
         "bash",
-        "help",
+        "nix",
         "html",
         "javascript",
         "json",

@@ -3,17 +3,17 @@
 {
   imports = [
     # inputs.impermanence.nixosModules.impermanence
-     inputs.home-manager.nixosModules.home-manager
+    inputs.home-manager.nixosModules.home-manager
     # ./locale.nix
-    ./nix.nix
-    ./zsh.nix
+    # removed zsh for startup time debugging
+    /* ./zsh.nix */
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager = {
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs outputs; };
   };
-  
+
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
     config = {

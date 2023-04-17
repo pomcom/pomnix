@@ -17,16 +17,16 @@
       # Language Servers
       # gopls
       # rnix-lsp
-      # sumneko-lua-language-server
-     # java-language-server
-   ];
+      lua-language-server
+      # java-language-server
+    ];
 
- };
+  };
 
- xdg.configFile = {
-   nvim = {
-     source = ./config/nvim;
-     recursive = true;
-   };
+  xdg.configFile = {
+    nvim = {
+      source = ./config/nvim;
+      recursive = true;
+    };
   };
 }

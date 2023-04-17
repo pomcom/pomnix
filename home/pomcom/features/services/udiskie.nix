@@ -1,12 +1,10 @@
-{config, lib, pkgs, user, ... }:
+{ config, lib, pkgs, user, ... }:
 
 {
-    services.udiskie = {
-        enable = true;
-        automount = true;
-        notify = true;
-        tray = "auto";
-      };
-
-      programs.go.enable = true;
-  }
+  services.udiskie = {
+    enable = true;
+    automount = true;
+    notify = true;
+    tray = "auto";
+  };
+}

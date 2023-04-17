@@ -5,7 +5,7 @@
 
     enable = true;
     defaultEditor = true;
-    package = pkgs.neovim-nightly;
+    /* package = pkgs.neovim-nightly; */
 
     viAlias = true;
     vimdiffAlias = true;
@@ -18,15 +18,15 @@
       # gopls
       # rnix-lsp
       # sumneko-lua-language-server
-     # java-language-server
-   ];
+      # java-language-server
+    ];
 
- };
+  };
 
- xdg.configFile = {
-   nvim = {
-     source = ./config/nvim;
-     recursive = true;
-   };
+  xdg.configFile = {
+    nvim = {
+      source = ./config/nvim;
+      recursive = true;
+    };
   };
 }

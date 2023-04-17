@@ -1,5 +1,4 @@
-
-{ config, pkgs, lib, inputs, user, outputs,  ... }:
+{ config, pkgs, lib, inputs, user, outputs, ... }:
 
 {
 
@@ -45,7 +44,7 @@
     pulseaudio.enable = false;
     bluetooth.enable = true;
 
-    };
+  };
 
   security.rtkit.enable = true;
 
@@ -71,15 +70,16 @@
     light.enable = true;
     adb.enable = true;
     dconf.enable = true;
+    zsh.enable = true;
   };
 
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-  plasma-browser-integration
-  kwallet
-  kwalletmanager
+    plasma-browser-integration
+    kwallet
+    kwalletmanager
 
-];
- 
+  ];
+
 
 
   system.stateVersion = "22.05";
