@@ -16,5 +16,6 @@
       texmaker
       networkmanagerapplet
       vlc
+      nextcloud-client
   ];
 }
