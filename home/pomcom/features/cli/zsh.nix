@@ -13,9 +13,8 @@
       plugins = [
         { name = "mafredri/zsh-async"; }
         { name = "sindresorhus/pure"; }
-        { name = "Grafcube/zplug-git"; }
+        /* { name = "Grafcube/zplug-git"; } */
         #{ name = "lib/completion.zsh";}
-        { name = "zsh-users/zsh-autosuggestions"; }
       ];
     };
 
@@ -35,14 +34,25 @@
       XDG_CONFIG_HOME = "$HOME/.config";
       PATH = "$PATH:$HOME/go/bin";
       GOPATH = "$HOME/go";
-      };
+    };
 
-      initExtra = ''
+    initExtra = ''
+
+      # helper to make modifiable copy of immutable link to nix store
+      function tinker() {
+        FILE=$1
+        mv $1 $1.bak
+        cp $1.bak $1
+        chmod +w $1
+        vi $1
+      }
 
       bindkey "^[[1;5C" emacs-forward-word
       bindkey "^[[1;5D" emacs-backward-word
       '';
-      shellAliases = {
+    shellAliases = {
+
+      myip = "curl ifconfig.me";
       ls = "exa";
       ll = "ls -alh";
       la = "ls -a";
@@ -50,19 +60,24 @@
       tree = "la --tree";
       trees = "tree --depth 4";
 
+      ".." = "cd ../";
+      "..." = "cd ../../";
+      "...." = "cd ../../../";
+      "....." = "cd ../../../../";
+      "......" = "cd ../../../../../";
+
       _ = "sudo";
       cat = "bat -p";
       grep = "grep --color";
       hg = "history 0 | grep";
       mycolors = "msgcat --color=test";
       view = "zathura";
-      build = "sudo nixos-rebuild switch --flake .#";
     };
   };
 
   programs.autojump.enable = true;
   programs.bat.enable = true;
-  
+
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
