@@ -1,7 +1,7 @@
 { config, lib, pkgs, user, ... }:
 
 {
-#TODO: fix env variable to avoid shortcut workaround 
+  #TODO: fix env variable to avoid shortcut workaround 
 
   home.packages = with pkgs; [
     keepmenu
@@ -14,11 +14,11 @@
     theme = "android_notification";
   };
 
-  
+
 
   xsession.windowManager.i3 = {
     enable = true;
-  
+
     config = rec {
       modifier = "Mod4";
       terminal = "Alacritty";
@@ -31,44 +31,47 @@
       };
 
       assigns = {
-        "2" = [{ class = "alacritty"; }];
-        "3" = [{ class = "Firefox"; }];
-        "4" = [{ class = "Signal"; }];
-        "5" = [{ class = "Thunderbird"; }];
+        "1" = [{ class = "Alacritty"; }];
+        "2" = [{ class = "Firefox"; }];
+        "3" = [{ class = "obsidian"; }];
+        "4" = [{ class = "VMware Workstation"; }];
+        "9" = [{ class = "Ferdium"; }];
+        "10" = [{ class = "KeePassXC"; }];
+
       };
 
-      bars = [ {
+      bars = [{
         mode = "dock";
         position = "top";
         statusCommand = "${pkgs.i3status}/bin/i3status";
 
 
-        } ];
+      }];
 
-      startup =[
+      startup = [
         # {command = "exec_always autotiling";}
         # { command = "alacritty"; }
       ];
 
 
       keybindings = lib.mkOptionDefault (
-         let
-           mod = "${modifier}";
-           left = "h";
-           down = "j";
-           up = "k";
-           right = "l";
-         in 
-         {
+        let
+          mod = "${modifier}";
+          left = "h";
+          down = "j";
+          up = "k";
+          right = "l";
+        in
+        {
 
           # "${mod}+enter" = "exec ${config.home.profileDirectory}/bin/alacritty";
           # "${mod}+enter" = "exec ${pkgs.alacritty}/bin/alacritty"
-           # "${mod}+o" = "exec ${config.home.profileDirectory}/bin/krunner";
+          # "${mod}+o" = "exec ${config.home.profileDirectory}/bin/krunner";
 
           "${mod}+q" = "kill";
 
-           # "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
-           # "${mod}+space" = "exec env PATH=\"${systemPath}\" ${pkgs.rofi}/bin/rofi -show run";
+          # "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
+          # "${mod}+space" = "exec env PATH=\"${systemPath}\" ${pkgs.rofi}/bin/rofi -show run";
 
           "${mod}+m" = "exec ${pkgs.rofi}/bin/rofi -show";
           # "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
@@ -116,9 +119,6 @@
           "${mod}+Shift+9" = "move container to workspace number 9";
           "${mod}+Shift+0" = "move container to workspace number 10";
 
-          "${mod}+p" =
-            "exec ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g- screenshot-$(date +%Y%m%d-%H%M%S).png";
-
           # "${mod}+h" = "split ;
           "${mod}+v" = "split v";
           "${mod}+f" = "fullscreen toggle";
@@ -160,17 +160,19 @@
           "XF86AudioPlay" = "exec ${pkgs.playerctl}/bin/playerctl play-pause";
           "XF86AudioNext" = "exec ${pkgs.playerctl}/bin/playerctl next";
           "XF86AudioPrev" = "exec ${pkgs.playerctl}/bin/playerctl previous";
-        });
+        }
+      );
     };
-    extraConfig = 
+    extraConfig =
       ''
-      for_window [title="Desktop — Plasma"] kill; floating enable; border none
-      for_window [class="krunner"] floating enable, border none
+        for_window [title="Desktop — Plasma"] kill; floating enable; border none
+        for_window [title="Desktop @ QRect(0,0 2560x1440)  — Plasma"] kill; floating enable; border none
+        for_window [class="krunner"] floating enable, border none
 
       ''
-      ;
+    ;
 
-      
+
   };
 
 }
