@@ -1,6 +1,5 @@
 { pkgs, ... }:
 
-# i pray i do not need you anymore
 {
   programs.java = {
     enable = true;
