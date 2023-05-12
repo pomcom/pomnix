@@ -1,12 +1,13 @@
 { config, lib, pkgs, ... }:
 
 {
+
  programs.alacritty = {
     enable = true;
     settings = {
       env.TERM = "xterm-256color";
       font = {
-        size = 12.0;
+        size = 13.0;
         normal = {
           famile = "Hack Nerd Font Mono";
           style = "Regular";
