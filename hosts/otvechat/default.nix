@@ -22,6 +22,7 @@
 
    networking.extraHosts = ''
      10.12.12.5 seafile.spike.local
+     10.12.12.4  git.spike.local
    '';
 
   services = {

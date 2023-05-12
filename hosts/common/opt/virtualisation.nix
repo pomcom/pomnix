@@ -1,23 +1,31 @@
 { pkgs, ... }:
-{
-  virtualisation = {
 
-    docker.enable = true;
-    vmware.host.enable = true;
+  
+    /* environment.packages = with pkgs; [ */
+    /*   docker-compose */
+    /**/
+    /* ]; */
 
-    # needed for vagrant
-    libvirtd.enable = true;
+    {
+      virtualisation = {
 
-    virtualbox = {
-      host = {
-        enable = true;
-        enableExtensionPack = true;
+        docker.enable = true;
+        vmware.host.enable = true;
+
+        # needed for vagrant
+        libvirtd.enable = true;
+
+        virtualbox = {
+          host = {
+            enable = true;
+            enableExtensionPack = true;
+          };
+          guest = {
+            enable = true;
+            x11 = true;
+          };
+        };
       };
-      guest = {
-        enable = true;
-        x11 = true;
-      };
-    };
-  };
 
-}
+    }
+  

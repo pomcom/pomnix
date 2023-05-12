@@ -5,6 +5,8 @@
     ./features/services/nextcloud.nix
     ./features/desktop/i3/config.nix
 
+    ./features/dev/java.nix
+
 
     ./features/desktop/common/flameshot.nix
     ./features/desktop/common/obsidian.nix
@@ -17,11 +19,12 @@
 
   home.packages = with pkgs; [
     kde-gruvbox
-    vscode
+    vscodium
 
     thunderbird 
     onedrive
 
+    discord
     gitkraken
     libreoffice-qt
     hunspell
@@ -33,6 +36,8 @@
     nomachine-client
     seafile-client
     spotify
+
+    vagrant
 
     chromium
     signal-desktop
