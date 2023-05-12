@@ -4,9 +4,10 @@
 
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+    enableCompletion = false;
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
+    defaultKeymap = "emacs";
 
     zplug = {
       enable = true;
