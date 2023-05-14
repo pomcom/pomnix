@@ -3,6 +3,7 @@
     ./global
     ./features/services/picom.nix
     ./features/services/nextcloud.nix
+    ./features/services/syncthing.nix
     ./features/desktop/i3/config.nix
 
     ./features/dev/java.nix
@@ -23,7 +24,6 @@
 
     thunderbird 
     onedrive
-
     discord
     gitkraken
     libreoffice-qt
