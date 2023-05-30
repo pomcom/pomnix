@@ -73,6 +73,11 @@
       hg = "history 0 | grep";
       mycolors = "msgcat --color=test";
       view = "zathura";
+
+      # pbcopy and pbpaste
+      pbcopy = "xclip -selection clipboard";
+      pbpaste = "xclip -selection clipboard -o";
+
     };
   };
 
@@ -83,6 +88,13 @@
     enable = true;
     enableZshIntegration = true;
     tmux.enableShellIntegration = false;
+  };
+
+   programs.atuin = {
+    enable = true;
+      flags = [
+      "--disable-up-arrow"
+    ];
   };
 
   programs.vim = {
