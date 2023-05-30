@@ -5,18 +5,27 @@
   imports =
     [
     ./hardware-configuration.nix
+
     ../common/global
     ../common/users/pomcom
-    ../common/opt/pipewire.nix
+    
+    ./x11/default.nix
+
+    ../common/opt/virtualisation.nix
     ../common/opt/polkit.nix
+    ../common/opt/pipewire.nix
     ];
 
   services.greetd.settings.default_session.user = "pomcom";
 
+
+
+
   networking.hostName = "tuxi";
   networking.networkmanager.enable = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
@@ -31,6 +40,7 @@
   programs = {
     light.enable = true;
     adb.enable = true;
+    zsh.enable = true;
     dconf.enable = true;
   };
 
@@ -47,6 +57,8 @@
 
   
   '';
+
+
   hardware.bluetooth.enable = true;
 
   services.logind ={
@@ -55,33 +67,33 @@
   };
 
 
-  virtualisation.vmware.host.enable = true;
+  #virtualisation.vmware.host.enable = true;
   # virtualisation.vmware.host.package = pkgs.my-vmware-workstation;
 
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "pomcom" ];
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+  #virtualisation.virtualbox.host.enable = true;
+  #users.extraGroups.vboxusers.members = [ "pomcom" ];
+  #virtualisation.virtualbox.host.enableExtensionPack = true;
   # virtualisation.virtualbox.guest.enable = true;
   # virtualisation.virtualbox.guest.x11 = true;
-  virtualisation.docker.enable = true;
+  #virtualisation.docker.enable = true;
 
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    extraPortals =  [
-       pkgs.xdg-desktop-portal-hyprland
-    ];
+  #xdg.portal = {
+  #  enable = true;
+  #  wlr.enable = true;
+  #  extraPortals =  [
+  #     pkgs.xdg-desktop-portal-hyprland
+  #  ];
 
-  };
+ # };
 
-  hardware = {
-    opengl = {
-      enable = true;
-      extraPackages = with pkgs; [ amdvlk ];
-      driSupport = true;
-      driSupport32Bit = true;
-    };
-  };
+  #hardware = {
+   # opengl = {
+    #  enable = true;
+     # extraPackages = with pkgs; [ amdvlk ];
+      #driSupport = true;
+     # driSupport32Bit = true;
+   # };
+ # };
 
 
 
@@ -90,8 +102,8 @@
   };
 
 # Enable swap on luks
-  boot.initrd.luks.devices."luks-58bc2382-9c9c-436d-8d46-edf03f9f34c0".device = "/dev/disk/by-uuid/58bc2382-9c9c-436d-8d46-edf03f9f34c0";
-  boot.initrd.luks.devices."luks-58bc2382-9c9c-436d-8d46-edf03f9f34c0".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-56623f99-0ed3-40f0-8ff6-e00f258889b2".device = "/dev/disk/by-uuid/56623f99-0ed3-40f0-8ff6-e00f258889b2";
+  boot.initrd.luks.devices."luks-56623f99-0ed3-40f0-8ff6-e00f258889b2".keyFile = "/crypto_keyfile.bin";
 
   time.timeZone = "Europe/Berlin";
 
@@ -121,6 +133,8 @@
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
   ];
+
+ 
 
 
   system.stateVersion = "22.05";

@@ -8,27 +8,25 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "rtsx_usb_sdmmc" ];
-  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "sd_mod" "rtsx_usb_sdmmc" ];
+  boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-      v4l2loopback # This is needed for obs virtual cam to work
-    ];
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/700d343e-a7d5-4b46-b8a7-6e3b0889a286";
+    { device = "/dev/disk/by-uuid/b0ed9741-c7dd-4e49-b16e-3fdc71c565f6";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."luks-7b74f5c1-cb64-4bb0-90d8-03a87fff0f7e".device = "/dev/disk/by-uuid/7b74f5c1-cb64-4bb0-90d8-03a87fff0f7e";
+  boot.initrd.luks.devices."luks-f936e50f-cae2-44fc-817c-3840c8644fd8".device = "/dev/disk/by-uuid/f936e50f-cae2-44fc-817c-3840c8644fd8";
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/AD9C-08EE";
+    { device = "/dev/disk/by-uuid/B114-C847";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/d63cd5aa-2504-4950-b4e3-46075a9b6a0d"; }
+    [ { device = "/dev/disk/by-uuid/b1c3478c-bab5-4484-8859-6a7c42260a63"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -37,10 +35,8 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp4s0f3u1u2i5.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  nixpkgs.hostPlatform = "x86_64-linux";
 }

@@ -2,6 +2,6 @@
 {
   services.xserver = {
     enable = true;
-    videoDrivers = [ "displaylink" "modsetting"];
+    videoDrivers = ["modsetting"];
   };
 }

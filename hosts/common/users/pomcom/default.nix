@@ -11,6 +11,7 @@ in
       "video"
       "audio"
       "vmware"
+      "vboxusers"
 
     ] ++ ifTheyExist [
       "network"
