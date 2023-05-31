@@ -17,6 +17,7 @@ environment.systemPackages = [
     pkgs.volumeicon
 
     pkgs.linuxKernel.packages.linux_5_15.vmware
+    pkgs.linuxKernel.packages.linux_5_15.tuxedo-keyboard
     pkgs.xorg.xf86videovmware
 
     pkgs.virt-manager

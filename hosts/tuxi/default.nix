@@ -1,9 +1,11 @@
 { config, pkgs, lib, inputs, user, outputs,  ... }:
 
+
 {
 
   imports =
     [
+  
     ./hardware-configuration.nix
 
     ../common/global
@@ -18,7 +20,7 @@
 
   services.greetd.settings.default_session.user = "pomcom";
 
-
+  hardware.tuxedo-control-center.enable = true;
 
 
   networking.hostName = "tuxi";
@@ -140,4 +142,5 @@
   system.stateVersion = "22.05";
 
 }
+
 
