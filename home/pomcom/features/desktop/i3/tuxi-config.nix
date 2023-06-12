@@ -47,8 +47,10 @@
       }];
 
       startup = [
-        {command = "exec_always autotiling";}
-        {command = "exec_always volumeicon";}
+        {command = "${pkgs.autotiling}/bin/autotiling";}
+        {command = "${pkgs.volumeicon}/bin/volumeicon";}
+        {command = "${pkgs.alacritty}/bin/alacritty";}
+
         # { command = "alacritty"; }
       ];
 
@@ -68,6 +70,9 @@
           "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
           "${mod}+Shift+x" = "exec ${pkgs.rofi}/bin/rofi -show p -modi p:'rofi-power-menu'";
           "${mod}+x" = "exec ${pkgs.i3lock-fancy}/bin/i3lock-fancy";
+
+          "${mod}+p" = "exec ${pkgs.flameshot}/bin/flameshot gui";
+
 
           "${mod}+${left}" = "focus left";
           "${mod}+${down}" = "focus down";
