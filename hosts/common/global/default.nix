@@ -28,8 +28,8 @@
     enableAllTerminfo = true;
   };
 
-  programs.fuse.userAllowOther = true;
-  hardware.enableRedistributableFirmware = false; #enabling this breaks mxmaster
+  #programs.fuse.userAllowOther = true;
+  #hardware.enableRedistributableFirmware = false; #enabling this breaks mxmaster
 
   # Increase open file limit for sudoers
   # security.pam.loginLimits = [

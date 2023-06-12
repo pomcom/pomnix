@@ -9,11 +9,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-     hyprland.url = "github:hyprwm/hyprland/v0.21.0beta";
+    hyprland.url = "github:hyprwm/hyprland/v0.21.0beta";
 
     hyprwm-contrib.url = "github:hyprwm/contrib";
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    
+    
+    tuxedo-nixos = {
+      url = "github:blitz/tuxedo-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
  outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -43,11 +50,18 @@
 
         tuxi = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./hosts/tuxi ];
+          modules = [ 
+          ./hosts/tuxi
+          inputs.tuxedo-nixos.nixosModules.default
+
+          ];
         };
         otvechat = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./hosts/otvechat];
+          modules = [
+          ./hosts/otvechat
+          inputs.tuxedo-nixos.nixosModules.default
+          ];
       };
 
 # Standalone home-manager configuration entrypoint

@@ -31,17 +31,15 @@
     file
 
     gnupg
+
     openssl
     sops
+
+    pciutils
 
   ];
 
 
-  programs.atuin = {
-    enable = true;
-      flags = [
-      "--disable-up-arrow"
-    ];
-  };
+ 
 
 }

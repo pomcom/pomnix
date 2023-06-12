@@ -3,7 +3,7 @@
   imports = [
     ../features/cli
     ../features/dev
-     ../features/nvim
+    ../features/nvim
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
@@ -27,6 +27,8 @@
   programs = {
     home-manager.enable = true;
     git.enable = true;
+    zsh.enable = true;	
+
   };
 
   home = {

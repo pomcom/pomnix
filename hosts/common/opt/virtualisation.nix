@@ -6,13 +6,13 @@
     /**/
     /* ]; */
 
+
     {
       virtualisation = {
 
         docker.enable = true;
         vmware.host.enable = true;
 
-        # needed for vagrant
         libvirtd.enable = true;
 
         virtualbox = {

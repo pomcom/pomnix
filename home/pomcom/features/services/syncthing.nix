@@ -1,6 +1,7 @@
 { config, lib, pkgs, user, ... }:
+
 {
-  services.syncthing= {
+  services.syncthing = {
     enable = true;
   };
 }
