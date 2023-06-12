@@ -23,13 +23,18 @@ environment.systemPackages = [
     pkgs.virt-manager
 
     pkgs.vagrant
-
     
+    pkgs.seafile-client
+    pkgs.citrix_workspace
+    pkgs.vmware-horizon-client
+
+
+    pkgs.pulsar
+
 
   ];
 
   
-
 
 services.xserver = {
     enable = true;   
