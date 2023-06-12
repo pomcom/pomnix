@@ -16,7 +16,7 @@
       mullvad-vpn
       signal-desktop
 
-      albert
+      atom
 
       # polkit_gnome
       # move 

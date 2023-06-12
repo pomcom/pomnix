@@ -14,6 +14,7 @@
    ./features/desktop/common/kitty.nix
    ./features/desktop/common/font.nix
 
+    ./features/dev/java.nix
 
    ./features/desktop/common/wayland-wm/alacritty.nix
 
@@ -32,4 +33,9 @@
 
    
   ];
-}
+
+  home.packages = with pkgs; [
+    libreoffice-fresh
+    
+      ];
+                       }
