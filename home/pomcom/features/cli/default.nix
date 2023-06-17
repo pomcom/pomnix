@@ -33,9 +33,14 @@
     gnupg
 
     openssl
+    #openssl_1_1
     sops
-
+    
+    traceroute 
     pciutils
+
+    restic
+
 
   ];
 

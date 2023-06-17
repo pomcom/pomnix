@@ -143,7 +143,21 @@
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
   ];
 
+
+ # security.pki.certificateFiles = [
+  #  "${pkgs.cacert}/etc/ssl/certs/Spike+Rocks+CA.crt"
+   #   "${pkgs.cacert}/etc/ssl/certs/spike.local+intermediate+CA.crt"
+#
+ # ];
  
+ security.pki.certificateFiles = [
+   "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
+    "/home/pomcom/reply/certs/Spike+Rocks+CA.crt"
+    "/home/pomcom/reply/certs/spike.local+intermediate+CA.crt"
+
+
+
+ ];
 
 
   system.stateVersion = "22.05";

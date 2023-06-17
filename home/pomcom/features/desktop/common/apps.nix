@@ -2,12 +2,13 @@
   home.packages = with pkgs; [
 
       chromium
-      #gnome3.nautilus
 
       gitkraken
 
       okular
       zathura
+      pdftk
+      pdfchain
 
       element-desktop
       discord
@@ -16,15 +17,14 @@
       mullvad-vpn
       signal-desktop
 
-      atom
+      pulsar
 
-      # polkit_gnome
-      # move 
       texlive.combined.scheme-full
       texmaker
-      #networkmanagerapplet
+
       vlc
-      
+
+  
       #nextcloud-client
   ];
-}
+x}

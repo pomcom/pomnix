@@ -14,6 +14,8 @@
    ./features/desktop/common/kitty.nix
    ./features/desktop/common/font.nix
 
+   ./features/desktop/common/gtk.nix
+
     ./features/dev/java.nix
 
    ./features/desktop/common/wayland-wm/alacritty.nix

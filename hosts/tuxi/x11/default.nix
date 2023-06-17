@@ -28,10 +28,7 @@ environment.systemPackages = [
     pkgs.citrix_workspace
     pkgs.vmware-horizon-client
 
-
-    pkgs.pulsar
-
-
+    pkgs.networkmanager-openvpn
   ];
 
   

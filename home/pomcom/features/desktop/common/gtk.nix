@@ -12,8 +12,11 @@
       package = pkgs.orchis-theme;
 
         
-      # name = "Colloid-Dark";
+      # name = "Adwaita-Dark";
       # package = pkgs.colloid-gtk-theme;
+
+      # name = "Colloid-Dark";
+       #package = pkgs.colloid-gtk-theme;
 
       # name = "Vertex-Dark";
       # package = pkgs.theme-vertex;
@@ -32,9 +35,12 @@
   services.xsettingsd = {
     enable = true;
     settings = {
-      # "Net/ThemeName" = "${gtk.theme.name}";
-      # "Net/IconThemeName" = "${gtk.iconTheme.name}";
+       "Net/ThemeName" = "Orchis-Grey-Dark-Compact";
+       "Net/IconThemeName" = "Papirus";
     };
   };
+
+
+
 }
  
