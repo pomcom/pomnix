@@ -18,7 +18,9 @@
       signal-desktop
 
       pulsar
-
+      onedrive
+      joplin-desktop
+      
       texlive.combined.scheme-full
       texmaker
 
@@ -27,4 +29,4 @@
   
       #nextcloud-client
   ];
-x}
+}

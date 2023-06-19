@@ -1,6 +1,14 @@
 { config, pkgs, inputs, ... }:
 
 {
+
+  
+  home.packages = with pkgs; [
+    gtkmm4
+    gtkmm3
+    gtkmm2
+  ];
+
   gtk = {
     enable = true;
     font = {
@@ -10,7 +18,7 @@
     theme = {
       name = "Orchis-Grey-Dark-Compact";
       package = pkgs.orchis-theme;
-
+    };
         
       # name = "Adwaita-Dark";
       # package = pkgs.colloid-gtk-theme;
@@ -20,7 +28,7 @@
 
       # name = "Vertex-Dark";
       # package = pkgs.theme-vertex;
-    };
+    
     # theme = {
       # name = "Adwaita-Dark";
       # name = "${config.colorscheme.slug}";
@@ -32,6 +40,17 @@
     };
   };
 
+  
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
+    style = {
+      name = "gtk2";
+      package = pkgs.libsForQt5.qtstyleplugins;
+    };
+  };
+
+ 
   services.xsettingsd = {
     enable = true;
     settings = {

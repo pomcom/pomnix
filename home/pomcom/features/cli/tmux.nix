@@ -33,5 +33,6 @@
     set -g display-time 4000
 
     '';
+    tmuxinator.enable = true;
   };
 }

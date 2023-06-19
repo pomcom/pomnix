@@ -35,6 +35,7 @@
       XDG_CONFIG_HOME = "$HOME/.config";
       PATH = "$PATH:$HOME/go/bin";
       GOPATH = "$HOME/go";
+      GTK_THEME = "Orchis-Grey-Dark-Compact";
     };
 
     initExtra = ''
