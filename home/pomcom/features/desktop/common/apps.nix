@@ -26,6 +26,14 @@
 
       vlc
 
+      xfce.thunar-volman
+      xfce.thunar-archive-plugin
+      xfce.thunar-media-tags-plugin
+
+      # sec audit
+      lynis
+      clamav
+
   
       #nextcloud-client
   ];

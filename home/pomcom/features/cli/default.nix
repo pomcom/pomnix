@@ -10,6 +10,7 @@
 
   home.packages = with pkgs; [
 
+    mc
     exa
     fd
     lsof
@@ -33,13 +34,13 @@
     gnupg
 
     openssl
-    #openssl_1_1
     sops
-    
+
     traceroute 
     pciutils
 
     restic
+    sshfs
 
   ];
 
