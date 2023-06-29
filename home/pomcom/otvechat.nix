@@ -4,7 +4,9 @@
     ./features/services/picom.nix
     ./features/services/nextcloud.nix
     ./features/services/syncthing.nix
-    ./features/desktop/i3/config.nix
+    /* ./features/desktop/i3/config.nix */
+
+    ./features/desktop/i3/tuxi-config.nix
 
     ./features/dev/java.nix
 
@@ -19,7 +21,6 @@
   ];
 
   home.packages = with pkgs; [
-    kde-gruvbox
     vscodium
 
     thunderbird 

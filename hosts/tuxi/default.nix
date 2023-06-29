@@ -5,13 +5,13 @@
 
   imports =
     [
-  
     ./hardware-configuration.nix
+
+    
+    ./x11/default.nix
 
     ../common/global
     ../common/users/pomcom
-    
-    ./x11/default.nix
 
     ../common/opt/virtualisation.nix
     ../common/opt/polkit.nix

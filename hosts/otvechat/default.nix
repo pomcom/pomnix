@@ -5,7 +5,8 @@
   imports = [
     ./hardware-configuration.nix
 
-    ./plasma-i3
+    /* ./plasma-i3 */
+    ../tuxi/x11/default.nix
 
     ../common/global
     ../common/users/pomcom
@@ -74,12 +75,12 @@
     zsh.enable = true;
   };
 
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
-    plasma-browser-integration
-    kwallet
-    kwalletmanager
-
-  ];
+  /* environment.plasma5.excludePackages = with pkgs.libsForQt5; [ */
+  /*   plasma-browser-integration */
+  /*   kwallet */
+  /*   kwalletmanager */
+  /**/
+  /* ]; */
 
 
 
