@@ -7,6 +7,9 @@
     gtkmm4
     gtkmm3
     gtkmm2
+    #libsForQt5.qtstyleplugins
+    #libsForQt5.qt5ct
+    
   ];
 
   gtk = {
@@ -38,15 +41,28 @@
       name = "Papirus";
       package = pkgs.papirus-icon-theme;
     };
+
+    gtk3.extraConfig= {
+      gtk-application-prefer-dark-theme=true;
+    };
+
+    gtk4.extraConfig= {
+      gtk-application-prefer-dark-theme=true;
+    };
+
+
   };
 
-  
+   
   qt = {
     enable = true;
     platformTheme = "gtk";
     style = {
-      name = "gtk2";
-      package = pkgs.libsForQt5.qtstyleplugins;
+      #package = pkgs.adwaita-qt;
+      #name = "adwaita-dark";
+
+     name = "gtk2";
+     package = pkgs.libsForQt5.qtstyleplugins;
     };
   };
 
