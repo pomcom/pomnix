@@ -7,7 +7,6 @@
     [
     ./hardware-configuration.nix
 
-    
     ./x11/default.nix
 
     ../common/global
