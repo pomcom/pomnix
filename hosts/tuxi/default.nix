@@ -1,8 +1,6 @@
 { config, pkgs, lib, inputs, user, outputs,  ... }:
 
-
 {
-
   imports =
     [
     ./hardware-configuration.nix
@@ -20,7 +18,6 @@
   services.greetd.settings.default_session.user = "pomcom";
 
   hardware.tuxedo-control-center.enable = true;
-
 
   networking.hostName = "tuxi";
   networking.networkmanager.enable = true;
@@ -67,37 +64,6 @@
     lidSwitchExternalPower = "lock";
   };
 
-
-  #virtualisation.vmware.host.enable = true;
-  # virtualisation.vmware.host.package = pkgs.my-vmware-workstation;
-
-  #virtualisation.virtualbox.host.enable = true;
-  #users.extraGroups.vboxusers.members = [ "pomcom" ];
-  #virtualisation.virtualbox.host.enableExtensionPack = true;
-  # virtualisation.virtualbox.guest.enable = true;
-  # virtualisation.virtualbox.guest.x11 = true;
-  #virtualisation.docker.enable = true;
-
-  #xdg.portal = {
-  #  enable = true;
-  #  wlr.enable = true;
-  #  extraPortals =  [
-  #     pkgs.xdg-desktop-portal-hyprland
-  #  ];
-
- # };
-
-  #hardware = {
-   # opengl = {
-    #  enable = true;
-     # extraPackages = with pkgs; [ amdvlk ];
-      #driSupport = true;
-     # driSupport32Bit = true;
-   # };
- # };
-
-
-
   boot.initrd.secrets = {
     "/crypto_keyfile.bin" = null;
   };
@@ -106,32 +72,33 @@
   boot.initrd.luks.devices."luks-56623f99-0ed3-40f0-8ff6-e00f258889b2".device = "/dev/disk/by-uuid/56623f99-0ed3-40f0-8ff6-e00f258889b2";
   boot.initrd.luks.devices."luks-56623f99-0ed3-40f0-8ff6-e00f258889b2".keyFile = "/crypto_keyfile.bin";
 
-  time.timeZone = "Europe/Berlin";
+  # time.timeZone = "Europe/Berlin";
 
-# Select internationalisation properties.
-  i18n.defaultLocale = "en_US.utf8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "de_DE.utf8";
-    LC_IDENTIFICATION = "de_DE.utf8";
-    LC_MEASUREMENT = "de_DE.utf8";
-    LC_MONETARY = "de_DE.utf8";
-    LC_NAME = "de_DE.utf8";
-    LC_NUMERIC = "de_DE.utf8";
-    LC_PAPER = "de_DE.utf8";
-    LC_TELEPHONE = "de_DE.utf8";
-    LC_TIME = "de_DE.utf8";
-  };
-
-
+# # Select internationalisation properties.
+#   i18n.defaultLocale = "en_US.utf8";
+#
+#   i18n.extraLocaleSettings = {
+#     LC_ADDRESS = "de_DE.utf8";
+#     LC_IDENTIFICATION = "de_DE.utf8";
+#     LC_MEASUREMENT = "de_DE.utf8";
+#     LC_MONETARY = "de_DE.utf8";
+#     LC_NAME = "de_DE.utf8";
+#     LC_NUMERIC = "de_DE.utf8";
+#     LC_PAPER = "de_DE.utf8";
+#     LC_TELEPHONE = "de_DE.utf8";
+#     LC_TIME = "de_DE.utf8";
+#   };
+#
+#
+  
   nixpkgs.config.permittedInsecurePackages = [
     "openssl-1.1.1u"
     "nodejs-14.21.3"
     "electron-13.6.9"
   ];
-
-
-
+#
+#
+#
 # Enable sound with pipewire.
   # sound.enable = true;
   sound.mediaKeys.enable = true;
@@ -140,15 +107,9 @@
 
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
+    rPackages.fontawesome
   ];
 
-
- # security.pki.certificateFiles = [
-  #  "${pkgs.cacert}/etc/ssl/certs/Spike+Rocks+CA.crt"
-   #   "${pkgs.cacert}/etc/ssl/certs/spike.local+intermediate+CA.crt"
-#
- # ];
- 
  security.pki.certificateFiles = [
    "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"
     "/home/pomcom/reply/certs/Spike+Rocks+CA.crt"
