@@ -1,7 +1,19 @@
 # pomnix
 
-These are my current nix os configuration files, tips of any kind are welcome, as I am not very experienced with nix I would not recommend using these as a basis for your own configuration.
+These are my current NixOS / Home_manager configuration files, tips of any kind are welcome.
 
-:)
+Since I am still learning, I would be careful with copy and paste if i were you.
+
+## Credits
+The whole structure of this repository is based on [Misterio77](https://github.com/Misterio77)'s [nix-config](https://github.com/Misterio77/nix-config).
+Those resources helped me so much to get started. Thanks a lot!
+
+Check out his [Starter config](https://github.com/Misterio77/nix-starter-configs) for a cool starting point if you're interested in [Nix](https://nixos.wiki/wiki/Nix_package_manager).
 
 
+Also check out this [human](https://github.com/jdsee), who also (most of the time) has a nice nix config.
+
+## References
+- [NixOS](https://nixos.org/)
+- [Home Manager](https://nixos.wiki/wiki/Home_Manager)
+- [Nix Flakes]
