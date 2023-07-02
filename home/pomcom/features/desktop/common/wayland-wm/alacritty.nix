@@ -10,15 +10,15 @@
       font = {
         size = 12.0;
         normal = {
-          famile = "Hack Nerd Font Mono";
+          family= "Hack Nerd Font Mono";
           style = "Regular";
         };
         bold = {
-          famile = "Hack Nerd Font Mono";
+          family = "Hack Nerd Font Mono";
           style = "Bold";
         };
         italic = {
-          famile = "Hack Nerd Font Mono";
+          family = "Hack Nerd Font Mono";
           style = "Italic";
         };
       };
@@ -33,7 +33,7 @@
         };
       };
       mouse = {
-        hide_when_typing = true;
+        hide_when_typing = false;
       };
       key_bindings = [
         { key = "I"; mods = "Control"; chars = "\e[105;5u"; }
