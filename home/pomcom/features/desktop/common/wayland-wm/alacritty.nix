@@ -4,6 +4,7 @@
 
  programs.alacritty = {
     enable = true;
+    
     settings = {
       env.TERM = "xterm-256color";
       font = {
@@ -22,7 +23,7 @@
         };
       };
       window = {
-        decorations = "none";
+        decorations = "full";
         title = "Alacritty";
         opacity = 1;
         dynamicPadding = true;
