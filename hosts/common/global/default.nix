@@ -4,9 +4,8 @@
   imports = [
     # inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
-    # ./locale.nix
-    # removed zsh for startup time debugging
-    /* ./zsh.nix */
+     ./locale.nix
+     ./nix.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager = {

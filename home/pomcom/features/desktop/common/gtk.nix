@@ -2,7 +2,6 @@
 
 {
 
-  
   home.packages = with pkgs; [
     gtkmm4
     gtkmm3
@@ -50,10 +49,8 @@
       gtk-application-prefer-dark-theme=true;
     };
 
-
   };
 
-   
   qt = {
     enable = true;
     platformTheme = "gtk";
@@ -74,8 +71,6 @@
        "Net/IconThemeName" = "Papirus";
     };
   };
-
-
 
 }
  

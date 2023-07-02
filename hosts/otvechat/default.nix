@@ -5,7 +5,6 @@
   imports = [
     ./hardware-configuration.nix
 
-    /* ./plasma-i3 */
     ../tuxi/x11/default.nix
 
     ../common/global
@@ -14,6 +13,10 @@
     ../common/opt/virtualisation.nix
   ];
 
+  fonts.fonts = with pkgs; [
+    pkgs.rPackages.fontawesome
+  
+];
 
   networking = {
     hostName = "otvechat";
@@ -81,8 +84,6 @@
   /*   kwalletmanager */
   /**/
   /* ]; */
-
-
 
   system.stateVersion = "22.05";
 

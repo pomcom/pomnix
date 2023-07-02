@@ -1,4 +1,5 @@
 { pkgs, config, lib, outputs, ... }:
+
 let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
@@ -32,7 +33,7 @@ in
 
   };
 
-  # sops.secrets.misterio-password = {
+  # sops.secrets.pomcom-password = {
   #   sopsFile = ../../secrets.yaml;
   #   neededForUsers = true;
   # };
