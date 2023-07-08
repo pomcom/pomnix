@@ -7,13 +7,13 @@
     ./font.nix
     ./gtk.nix
     ./pavucontrol.nix
-    ./qt.nix
     ./firefoxdev.nix
     ./thunderbird.nix
     ./drawio.nix
     ./apps.nix
     ./obs.nix
     ./yubikey.nix
+    ./krusader.nix
   ];
 
   xdg.mimeApps.enable = true;
