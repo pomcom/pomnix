@@ -29,8 +29,13 @@
       # sec audit
       lynis
       clamav
+      
+      postman
 
       gnome.nautilus
+      gparted
+      # gnome-disk-utlity
+      
       
   ];
 }
