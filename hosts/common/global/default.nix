@@ -26,6 +26,12 @@
     # };
     enableAllTerminfo = true;
   };
+  #
+  # environment.variables = {
+  #   QT_QPA_PLATFORMTHEME = "qt4ct";
+  #   };
+  #
+  #
 
   #programs.fuse.userAllowOther = true;
   #hardware.enableRedistributableFirmware = false; #enabling this breaks mxmaster
