@@ -34,8 +34,7 @@
 
       gnome.nautilus
       gparted
-      # gnome-disk-utlity
-      
+      gnome.gnome-disk-utility
       
   ];
 }

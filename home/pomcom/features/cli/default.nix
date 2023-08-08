@@ -42,6 +42,17 @@
     restic
     sshfs
 
+    mitmproxy
+    
+    bandwhich
+    ctop
+    gping
+    speedtest-cli
+    dog #better dig ???
+    ddgr
+    navi
+    procs
+
   ];
 
 

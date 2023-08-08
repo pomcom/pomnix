@@ -6,6 +6,5 @@
     #backend = "glx";
     /* activeOpacity = 0.7; */
     #inactiveOpacity = 0.9;
-
   };
 }
