@@ -1,5 +1,7 @@
 { inputs, pkgs, ... }: {
   imports = [
+
+  
     ./global
     ./features/services/picom.nix
     ./features/services/nextcloud.nix
@@ -11,6 +13,7 @@
     ./features/dev/java.nix
 
 
+    ./features/desktop/common/apps.nix
     ./features/desktop/common/flameshot.nix
     ./features/desktop/common/obsidian.nix
     ./features/desktop/common/keepassxc.nix
@@ -25,13 +28,10 @@
 
     thunderbird 
     onedrive
-    discord
     gitkraken
     libreoffice-qt
     hunspell
     # move pkgs to own files, add hunspell language pkgs
-
-
     alacritty
     ferdium
     nomachine-client
@@ -41,6 +41,5 @@
     vagrant
 
     chromium
-    signal-desktop
   ];
 }

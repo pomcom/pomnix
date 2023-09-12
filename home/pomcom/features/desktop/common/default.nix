@@ -1,7 +1,6 @@
 { pkgs, lib, outputs, ... }:
 {
   imports = [
-    ./discord.nix
     ./keepassxc.nix
     ./obsidian.nix
     ./font.nix
@@ -14,6 +13,7 @@
     ./obs.nix
     ./yubikey.nix
     ./krusader.nix
+    ./communication.nix
   ];
 
   xdg.mimeApps.enable = true;

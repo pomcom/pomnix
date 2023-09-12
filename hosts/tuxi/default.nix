@@ -23,6 +23,19 @@
   networking.hostName = "tuxi";
   networking.networkmanager.enable = true;
 
+  networking.wireless.networks."Camp2023".auth = ''
+  key_mgmt=WPA-EAP
+  eap=TTLS
+  identity="camp"
+  password="camp"
+  ca_cert="${builtins.fetchurl {
+    url = "https://letsencrypt.org/certs/isrgrootx1.pem";
+    sha256 = "sha256:1la36n2f31j9s03v847ig6ny9lr875q3g7smnq33dcsmf2i5gd92";
+  }}"
+  altsubject_match="DNS:radius.c3noc.net"
+  phase2="auth=PAP"
+'';
+
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15;
   boot.loader.systemd-boot.enable = true;
@@ -68,7 +81,7 @@
 
   
   nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1u"
+     "openssl-1.1.1v"
     "nodejs-14.21.3"
     "electron-13.6.9"
   ];
