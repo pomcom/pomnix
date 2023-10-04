@@ -6,7 +6,7 @@
     enable = true;
     enableCompletion = false;
     enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
     defaultKeymap = "emacs";
 
     zplug = {
@@ -53,12 +53,12 @@
     shellAliases = {
 
       myip = "curl ifconfig.me";
-      ls = "exa";
       ll = "ls -alh";
       la = "ls -a";
       ld = "ls -ad";
       tree = "la --tree";
       trees = "tree --depth 4";
+      ls = "exa";
 
       ".." = "cd ../";
       "..." = "cd ../../";

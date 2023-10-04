@@ -14,6 +14,9 @@
     ./yubikey.nix
     ./krusader.nix
     ./communication.nix
+    ./apps.nix
+    ./flameshot.nix
+    ./kitty.nix
   ];
 
   xdg.mimeApps.enable = true;

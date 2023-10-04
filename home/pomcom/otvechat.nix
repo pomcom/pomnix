@@ -27,8 +27,6 @@
     vscodium
 
     thunderbird 
-    onedrive
-    gitkraken
     libreoffice-qt
     hunspell
     # move pkgs to own files, add hunspell language pkgs
@@ -36,7 +34,6 @@
     ferdium
     nomachine-client
     seafile-client
-    spotify
 
     vagrant
 

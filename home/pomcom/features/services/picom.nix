@@ -6,7 +6,7 @@
     #backend = "glx";
     /* activeOpacity = 0.7; */
     #inactiveOpacity = 0.9;
-    settings = { 
-    "corner-radius" = 10; };
-  };
+  #   settings = { 
+  #   "corner-radius" = 10; };
+   };
 }

@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
 
     mc
-    exa
+    eza
     fd
     lsof
     httpie
@@ -48,7 +48,6 @@
     ctop
     gping
     speedtest-cli
-    dog #better dig ???
     ddgr
     navi
     procs

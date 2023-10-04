@@ -10,16 +10,20 @@
     };
 
     hyprland.url = "github:hyprwm/hyprland/v0.21.0beta";
-
     hyprwm-contrib.url = "github:hyprwm/contrib";
-
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    
     
     tuxedo-nixos = {
       url = "github:blitz/tuxedo-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sops-nix = {
+      url = "github:mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-stable.follows = "nixpkgs";
+  };
+
 
   };
 
@@ -53,9 +57,9 @@
           modules = [ 
           ./hosts/tuxi
           inputs.tuxedo-nixos.nixosModules.default
-
           ];
         };
+
         otvechat = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [

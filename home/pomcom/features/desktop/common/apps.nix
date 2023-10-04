@@ -2,6 +2,9 @@
   home.packages = with pkgs; [
 
       chromium
+      brave
+      vivaldi
+      palemoon-bin
 
       gitkraken
 
@@ -9,13 +12,9 @@
       zathura
       pdftk
       pdfchain
-
-      element-desktop
-      discord
       
       spotify
       mullvad-vpn
-      signal-desktop
 
       pulsar
       onedrive
@@ -25,16 +24,22 @@
       texmaker
 
       vlc
-
       # sec audit
       lynis
       clamav
       
       postman
+      vscode
 
       gnome.nautilus
       gparted
       gnome.gnome-disk-utility
+
+      cryptomator
+
+      nextcloud-client
+
+
       
   ];
 }

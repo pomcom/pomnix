@@ -97,13 +97,21 @@
 #'class' matches the 'WM_CLASS': xprop | grep WM_CLASS
 ## 'title' matches the 'WM_NAME': xprop | grep WM_NAME
       assigns = {
-        "1" = [{ class = "Alacritty"; }];
+        # "1" = [{ class = "Alacritty"; }];
         "2" = [{ class = "firefox-aurora"; }];
         "3" = [{ class = "obsidian"; }];
         "4" = [{ class = "VMware Workstation"; }];
         "9" = [{ class = "Chromium-browser"; }];
         "10" = [{ class = "KeePassXC"; } { class = "Signal"; }];
       };
+
+      floating.criteria = [ 
+        { title = "Cryptomator"; }
+        { class = "Cryptomator"; }
+        { class = "DialogBox"; title = "Settings"; }
+
+      ];
+
 
       bars = [{
 
@@ -124,7 +132,6 @@
         {command = "greenclip daemon >/dev/null";}
         {command = "${pkgs.autotiling}/bin/autotiling";}
         {command = "${pkgs.volumeicon}/bin/volumeicon";}
-        {command = "${pkgs.alacritty}/bin/alacritty";}
       ];
 
       keybindings = lib.mkOptionDefault (
