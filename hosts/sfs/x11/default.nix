@@ -6,7 +6,7 @@ environment.systemPackages = [
 
     pkgs.xorg.xf86videoamdgpu
     pkgs.xclip
-    pkgs.light
+    #pkgs.light
     pkgs.playerctl
     pkgs.pamixer
     pkgs.mpv
@@ -15,14 +15,16 @@ environment.systemPackages = [
     pkgs.i3lock-fancy
     pkgs.wmctrl
     pkgs.volumeicon
-    pkgs.linuxKernel.packages.linux_5_15.vmware
-    pkgs.linuxKernel.packages.linux_5_15.tuxedo-keyboard
+  #  pkgs.linuxKernel.packages.linux_5_15.vmware
+   # pkgs.linuxKernel.packages.linux_6_4.vmware
+  #  pkgs.linuxKernel.packages.linux_6_5.vmware
+ #   pkgs.linuxKernel.packages.linux_5_15.tuxedo-keyboard
     pkgs.xorg.xf86videovmware
     pkgs.virt-manager
-    pkgs.vagrant
+    #pkgs.vagrant
     pkgs.seafile-client
-    pkgs.citrix_workspace
-    pkgs.vmware-horizon-client
+    #pkgs.citrix_workspace
+#    pkgs.vmware-horizon-client
     pkgs.networkmanager-openvpn
   ];
 
@@ -36,16 +38,7 @@ services.xserver = {
         enableXfwm = false;
       };
     };
-    displayManager = {
-      defaultSession = "xfce";
-      lightdm = {
-        enable = true;
-        greeter.enable = true;
-
-      };
-
-    };
-    
+    displayManager.defaultSession = "xfce+i3";
     windowManager.i3.package = pkgs.i3-gaps;
     windowManager.i3.enable = true;
   };
@@ -54,7 +47,9 @@ services.xserver = {
   services.xserver = {
     layout = "us";
     xkbVariant = "";
-    videoDrivers = ["displaylink" "modsetting"];
+    videoDrivers = ["amdgpu"];
   };
+
+
 
 }

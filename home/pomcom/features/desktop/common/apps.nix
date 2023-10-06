@@ -4,7 +4,8 @@
       chromium
       brave
       vivaldi
-      palemoon-bin
+      google-chrome
+      
 
       gitkraken
 
@@ -28,7 +29,7 @@
       lynis
       clamav
       
-      postman
+      #postman
       vscode
 
       gnome.nautilus
@@ -37,7 +38,7 @@
 
       cryptomator
 
-      nextcloud-client
+      #nextcloud-client
 
 
       
