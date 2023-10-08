@@ -86,7 +86,7 @@
           modules = [ ./home/pomcom/tuxi.nix];
         };
 
-        "pomcom@parrot" = home-manager.lib.homeManagerConfiguration {
+        "pomcom@vm" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; 
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ ./home/pomcom/minimal.nix];
