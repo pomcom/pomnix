@@ -78,6 +78,7 @@
 
 # Standalone home-manager configuration entrypoint
 # Available through 'home-manager --flake .#your-username@your-hostname'
+      defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
 
       homeConfigurations = {
         "pomcom@tuxi" = home-manager.lib.homeManagerConfiguration {
@@ -86,7 +87,7 @@
           modules = [ ./home/pomcom/tuxi.nix];
         };
 
-        "pomcom@vm" = home-manager.lib.homeManagerConfiguration {
+        "pomcom@parrot" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; 
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ ./home/pomcom/minimal.nix];
