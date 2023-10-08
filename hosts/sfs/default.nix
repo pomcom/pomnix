@@ -23,7 +23,7 @@ networking.hostName = "sfs";
 networking.networkmanager.enable = true;
 
 
-boot.kernelPackages = pkgs.linuxKernel.packages.linux_5_15;
+boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_4;
 
 boot.loader.systemd-boot.enable = true;
 boot.loader.efi.canTouchEfiVariables = true;
@@ -55,7 +55,7 @@ programs = {
     lidSwitchExternalPower = "lock";
   };
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Hack" ]; })
     rPackages.fontawesome
   ];
