@@ -3,8 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
 
-    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
 
     home-manager = {
       url = "github:nix-community/home-manager";
