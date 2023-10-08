@@ -83,8 +83,14 @@
         "pomcom@tuxi" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux; 
           extraSpecialArgs = { inherit inputs outputs; };
-          modules = [ ./home/pomcom/minimal.nix];
+          modules = [ ./home/pomcom/tuxi.nix];
         };
+
+        "pomvom@parrot" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux; 
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./home/pomcom/minimal.nix];
+
       };
     };
   };
