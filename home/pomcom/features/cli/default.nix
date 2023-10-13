@@ -52,6 +52,8 @@
     navi
     procs
 
+    usbutils
+
   ];
 
 

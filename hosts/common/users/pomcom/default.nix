@@ -23,6 +23,7 @@ in
       "git"
       "libvirtd"
       "qemu-libvirtd"
+      "jackaudio"
     ];
 
     # openssh.authorizedKeys.keys = [

@@ -38,7 +38,9 @@
 
       cryptomator
 
-      #nextcloud-client
+      nextcloud-client
+      #cadence
+      #alsa-scarlett-gui
 
 
       
