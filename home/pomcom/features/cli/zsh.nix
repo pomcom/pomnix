@@ -53,12 +53,13 @@
     shellAliases = {
 
       myip = "curl ifconfig.me";
-      ll = "ls -alh";
-      la = "ls -a";
+      ll = "exa -lbF --git";
+      llm = "exa -lbGd --git --sort=modified";
+      
+
       ld = "ls -ad";
       tree = "la --tree";
       trees = "tree --depth 4";
-      ls = "exa";
 
       ".." = "cd ../";
       "..." = "cd ../../";
@@ -107,9 +108,13 @@
 
    programs.atuin = {
     enable = true;
-      flags = [
+    flags = [
       "--disable-up-arrow"
     ];
+    settings = {
+      style = "compact";
+
+      };
   };
 
   programs.vim = {
