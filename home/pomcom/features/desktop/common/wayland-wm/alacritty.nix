@@ -6,6 +6,7 @@
     enable = true;
     
     settings = {
+      import = [ pkgs.alacritty-theme.ayu_dark ];
       env.TERM = "xterm-256color";
       font = {
         size = 12.0;

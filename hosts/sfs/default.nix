@@ -37,6 +37,14 @@ services.fwupd.enable = false;
 
 powerManagement.powertop.enable = true;
 
+
+# needed for hashcat
+hardware.opengl.extraPackages = with pkgs; [
+  rocm-opencl-icd
+  rocm-opencl-runtime
+];
+
+
 programs = {
     light.enable = true;
     adb.enable = false;

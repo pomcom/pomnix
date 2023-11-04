@@ -6,6 +6,10 @@
 
   neovim-nightly = inputs.neovim-nightly-overlay.overlay;
 
+  # alacritty-theme = inputs.alacritty-theme.overlay;
+  alacritty-theme = inputs.alacritty-theme.overlays.default;
+
+
   modifications = final: prev: {
 
     flameshot = prev.flameshot.overrideAttrs (old: {

@@ -53,6 +53,8 @@
     procs
 
     usbutils
+    expect
+    iftop
 
   ];
 

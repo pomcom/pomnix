@@ -10,6 +10,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
 
     hyprland.url = "github:hyprwm/hyprland/v0.21.0beta";
     hyprwm-contrib.url = "github:hyprwm/contrib";
@@ -74,6 +76,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [ 
           ./hosts/sfs
+          inputs.tuxedo-nixos.nixosModules.default
           ];
         };
 
