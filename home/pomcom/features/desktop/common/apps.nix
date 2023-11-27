@@ -41,6 +41,8 @@
       nextcloud-client
       #cadence
       #alsa-scarlett-gui
+      #
+      freerdp
 
 
       

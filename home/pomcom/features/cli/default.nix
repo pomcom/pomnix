@@ -56,6 +56,14 @@
     expect
     iftop
 
+    exiftool
+    tldr
+    hyperfine
+    jq
+    ripgrep
+    sd
+    tre
+
   ];
 
 
