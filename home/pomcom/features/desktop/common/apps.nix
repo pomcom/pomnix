@@ -29,7 +29,7 @@
       lynis
       clamav
       
-      #postman
+      postman
       vscode
 
       gnome.nautilus
@@ -37,7 +37,7 @@
       gnome.gnome-disk-utility
 
       cryptomator
-
+      
       nextcloud-client
       #cadence
       #alsa-scarlett-gui

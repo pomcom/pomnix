@@ -4,6 +4,7 @@
 
   [ 
     discord
+    betterdiscordctl
     element-desktop
     teams-for-linux
     mattermost-desktop

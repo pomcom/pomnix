@@ -6,7 +6,7 @@
     enable = true;
     
     settings = {
-      import = [ pkgs.alacritty-theme.ayu_dark ];
+      import = [ pkgs.alacritty-theme.tokyo-night ];
       env.TERM = "xterm-256color";
       font = {
         size = 12.0;

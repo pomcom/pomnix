@@ -73,7 +73,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = "gruvbox-dark";
+    theme = "tokyo-night";
     terminal = "alacritty";
   };
 
