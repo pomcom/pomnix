@@ -94,6 +94,9 @@
       nmap_web_safe_osscan="sudo nmap -p 80,443 -O -v --osscan-guess --fuzzy ";
       nmap_ping_scan="nmap -n -sP";
 
+
+      # wetter="wttr.in/Berlin";
+
     };
   };
 

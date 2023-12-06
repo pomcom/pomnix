@@ -54,7 +54,7 @@ services.xserver = {
   services.xserver = {
     layout = "us";
     xkbVariant = "";
-    videoDrivers = ["displaylink" "modsetting"];
+    videoDrivers = ["modsetting"];
   };
 
 }
