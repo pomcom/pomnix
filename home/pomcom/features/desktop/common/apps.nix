@@ -6,7 +6,6 @@
       vivaldi
       google-chrome
       
-
       gitkraken
 
       okular
@@ -29,7 +28,6 @@
       lynis
       clamav
       
-      postman
       vscode
 
       gnome.nautilus
