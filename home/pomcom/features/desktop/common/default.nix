@@ -17,6 +17,7 @@
     ./apps.nix
     ./flameshot.nix
     ./kitty.nix
+    # ./vscode.nix
   ];
 
   xdg.mimeApps.enable = true;

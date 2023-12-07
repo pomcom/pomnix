@@ -28,7 +28,10 @@
       lynis
       clamav
       
-      vscode
+      
+      # vscode
+      ltex-ls
+      # vscodium
 
       gnome.nautilus
       gparted
