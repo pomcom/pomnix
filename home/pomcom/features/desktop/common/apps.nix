@@ -30,7 +30,7 @@
       
       
       # vscode
-      ltex-ls
+      # ltex-ls
       # vscodium
 
       gnome.nautilus
