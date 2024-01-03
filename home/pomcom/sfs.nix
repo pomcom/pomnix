@@ -17,13 +17,10 @@
       ./features/services/picom.nix
 
       ./features/desktop/i3/tuxi-config.nix
-
       ];
 
   home.packages = with pkgs; [
       libreoffice-fresh
       ferdium
-
   ];
-                 
 }

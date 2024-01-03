@@ -16,7 +16,6 @@
       spotify
       mullvad-vpn
 
-      pulsar
       onedrive
       joplin-desktop
       
@@ -26,7 +25,6 @@
       vlc
       # sec audit
       lynis
-      clamav
       
       
       # vscode

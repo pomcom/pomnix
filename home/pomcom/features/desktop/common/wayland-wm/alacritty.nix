@@ -9,7 +9,7 @@
       import = [ pkgs.alacritty-theme.tokyo-night ];
       env.TERM = "xterm-256color";
       font = {
-        size = 12.0;
+        size = 11.0;
         normal = {
           family= "Hack Nerd Font Mono";
           style = "Regular";

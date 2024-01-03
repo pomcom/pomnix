@@ -6,6 +6,7 @@
     autotiling
     rofi-power-menu
     haskellPackages.greenclip
+    xorg.xmodmap
   ];
 
   programs.i3status-rust = {
@@ -66,7 +67,6 @@
       icons = "awesome6";
       theme = "gruvbox-dark";
     };
-
 
   };
   };
@@ -169,7 +169,8 @@
           "${mod}+p" = "exec ${pkgs.flameshot}/bin/flameshot gui";
           "${mod}+t" = "exec /home/pomcom/tools/scripts-public/rofi-script/tmux_session.sh";
  
-           "${mod}+g" = "exec ${scriptpath}/rofi_script_runner.sh";
+           
+          "${mod}+g" = "exec ${scriptpath}/rofi_script_runner.sh";
 
 
           "${mod}+Tab" =  "workspace back_and_forth";
@@ -195,7 +196,6 @@
           "${mod}+Shift+Right" = "move right";
 
           "${mod}+Shift+space" = "floating toggle";
-
 
           "${mod}+1" = "workspace number ${ws1}";
           "${mod}+2" = "workspace number ${ws2}";
