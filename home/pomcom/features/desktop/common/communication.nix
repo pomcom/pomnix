@@ -11,6 +11,7 @@
     teamspeak_client
     signal-desktop
     slack
+    hexchat
 
   ];
 }

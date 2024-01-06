@@ -10,6 +10,8 @@
 
   home.packages = with pkgs; [
 
+
+    ranger
     mc
     eza
     fd

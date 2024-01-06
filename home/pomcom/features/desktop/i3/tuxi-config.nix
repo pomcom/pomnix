@@ -74,7 +74,7 @@
   programs.rofi = {
     enable = true;
     theme = "tokyo-night";
-    terminal = "alacritty";
+    terminal = "kitty";
   };
 
   xsession.windowManager.i3 = {
@@ -82,7 +82,7 @@
 
     config = rec {
       modifier = "Mod4";
-      terminal = "alacritty";
+      terminal = "kitty";
       workspaceAutoBackAndForth = true;
 
       gaps = {

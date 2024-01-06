@@ -17,13 +17,18 @@
     ../common/opt/environment.nix
     ];
 
+nixpkgs.config.permittedInsecurePackages = [ 
+     lib.optional (pkgs.obsidian.version == "0.4.16") "electron-25.9.0"
+];
+
+
 services.greetd.settings.default_session.user = "pomcom"; 
 
 networking.hostName = "sfs"; 
 networking.networkmanager.enable = true;
 
 
-boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_4;
+boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
 
 boot.loader.systemd-boot.enable = true;
 boot.loader.efi.canTouchEfiVariables = true;
@@ -59,11 +64,6 @@ programs = {
     dconf.enable = true;
   };
 
-   nixpkgs.config.permittedInsecurePackages = [
-    "openssl-1.1.1w"
-    "nodejs-14.21.3"
-    "electron-13.6.9"
-  ]; 
 
  services.logind ={
     lidSwitch = "suspend";

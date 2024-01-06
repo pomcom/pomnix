@@ -17,7 +17,7 @@
       ];
     };
 
-    history = {
+        history = {
       size = 100000;
       save = 1000000;
       share = true;
@@ -27,7 +27,7 @@
 
     sessionVariables = {
       GPG_TTY = "$(tty)";
-      MANPAGER = "sh -c 'col -bx | bat -l man -p'";
+      #MANPAGER = "sh -c 'col -bx | bat -l man -p'";
       PURE_NODE_ENABLED = 0;
       PURE_CMD_MAX_EXEC_TIME = 0;
       XDG_CONFIG_HOME = "$HOME/.config";
@@ -94,14 +94,14 @@
       nmap_web_safe_osscan="sudo nmap -p 80,443 -O -v --osscan-guess --fuzzy ";
       nmap_ping_scan="nmap -n -sP";
 
+      p = "termpdf.py";
+      i = "pixcat";
 
-      # wetter="wttr.in/Berlin";
 
     };
   };
 
   programs.autojump.enable = true;
-  programs.bat.enable = true;
 
   programs.fzf = {
     enable = true;
@@ -116,7 +116,6 @@
     ];
     settings = {
       style = "compact";
-
       };
   };
 
