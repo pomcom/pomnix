@@ -10,7 +10,6 @@
 
   home.packages = with pkgs; [
 
-
     ranger
     mc
     eza
@@ -38,14 +37,14 @@
     openssl
     sops
 
-    traceroute 
+    traceroute
     pciutils
 
     restic
     sshfs
 
     mitmproxy
-    
+
     bandwhich
     ctop
     gping
@@ -66,9 +65,7 @@
     sd
     tre
 
+    nixpkgs-fmt
   ];
-
-
- 
 
 }

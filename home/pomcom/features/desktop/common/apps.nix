@@ -1,45 +1,43 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
 
-      chromium
-      brave
-      vivaldi
-      google-chrome
-      
-      gitkraken
+    chromium
+    brave
+    vivaldi
+    google-chrome
 
-      okular
-      zathura
-      pdftk
-      pdfchain
-      
-      spotify
-      mullvad-vpn
+    gitkraken
 
-      onedrive
-      joplin-desktop
-      
-      texlive.combined.scheme-full
-      texmaker
+    okular
+    zathura
+    pdftk
+    pdfchain
 
-      vlc
-      # sec audit
-      lynis
-      
-      
-      # vscode
-      # ltex-ls
-      # vscodium
+    spotify
+    mullvad-vpn
 
-      gnome.nautilus
-      gparted
-      gnome.gnome-disk-utility
+    onedrive
+    joplin-desktop
 
-      cryptomator
-      
-      nextcloud-client
+    texlive.combined.scheme-full
+    texmaker
 
+    vlc
+    # sec audit
+    lynis
 
-      
+    citrix_workspace
+
+    # vscode
+    # ltex-ls
+    # vscodium
+    gnome.nautilus
+    gparted
+    gnome.gnome-disk-utility
+
+    cryptomator
+
+    nextcloud-client
+
   ];
 }

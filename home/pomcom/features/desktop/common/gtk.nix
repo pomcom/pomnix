@@ -8,14 +8,12 @@
 #   };
 # };
 
-
-
 {
   home.packages = with pkgs; [
-      gtkmm4
-      gtkmm3
-      gtkmm2
-      libsForQt5.qt5ct
+    gtkmm4
+    gtkmm3
+    gtkmm2
+    libsForQt5.qt5ct
   ];
 
   home.sessionVariables = {
@@ -34,31 +32,31 @@
       package = pkgs.orchis-theme;
     };
 
-# name = "Adwaita-Dark";
-# package = pkgs.colloid-gtk-theme;
+    # name = "Adwaita-Dark";
+    # package = pkgs.colloid-gtk-theme;
 
-# name = "Colloid-Dark";
-#package = pkgs.colloid-gtk-theme;
+    # name = "Colloid-Dark";
+    #package = pkgs.colloid-gtk-theme;
 
-# name = "Vertex-Dark";
-# package = pkgs.theme-vertex;
+    # name = "Vertex-Dark";
+    # package = pkgs.theme-vertex;
 
-# theme = {
-# name = "Adwaita-Dark";
-# name = "${config.colorscheme.slug}";
-# package = gtkThemeFromScheme { scheme = config.colorscheme; };
-# };
+    # theme = {
+    # name = "Adwaita-Dark";
+    # name = "${config.colorscheme.slug}";
+    # package = gtkThemeFromScheme { scheme = config.colorscheme; };
+    # };
     iconTheme = {
       name = "Papirus";
       package = pkgs.papirus-icon-theme;
     };
 
-    gtk3.extraConfig= {
-      gtk-application-prefer-dark-theme=true;
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
     };
 
-    gtk4.extraConfig= {
-      gtk-application-prefer-dark-theme=true;
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
     };
 
   };
@@ -67,12 +65,12 @@
   #   enable = true;
   #   platformTheme = "gtk";
   #   style = {
-#package = pkgs.adwaita-qt;
-#name = "adwaita-dark";
-       # name = "gtk2";
-      # package = pkgs.libsForQt5.qtstyleplugins;
-    #  package = pkgs.libsForQt5.qtstyleplugin-kvantum;
-    #  name = "gtk2";
+  #package = pkgs.adwaita-qt;
+  #name = "adwaita-dark";
+  # name = "gtk2";
+  # package = pkgs.libsForQt5.qtstyleplugins;
+  #  package = pkgs.libsForQt5.qtstyleplugin-kvantum;
+  #  name = "gtk2";
   #   };
   # };
 
@@ -84,8 +82,4 @@
     };
   };
 
-
 }
-
-
-

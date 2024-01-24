@@ -1,17 +1,16 @@
 { pkgs, ... }: {
 
-  home.packages = with pkgs; 
+  home.packages = with pkgs;
 
-  [ 
-    discord
-    betterdiscordctl
-    element-desktop
-    teams-for-linux
-    mattermost-desktop
-    teamspeak_client
-    signal-desktop
-    slack
-    hexchat
+    [
+      discord
+      betterdiscordctl
+      element-desktop
+      mattermost-desktop
+      teamspeak_client
+      signal-desktop
+      slack
+      hexchat
 
-  ];
+    ];
 }

@@ -12,7 +12,6 @@
     ./apps.nix
     ./obs.nix
     ./yubikey.nix
-    ./krusader.nix
     ./communication.nix
     ./apps.nix
     ./flameshot.nix
@@ -22,6 +21,6 @@
 
   xdg.mimeApps.enable = true;
   home.packages = with pkgs; [
-# xdg-utils-spawn-terminal
+    # xdg-utils-spawn-terminal
   ];
 }

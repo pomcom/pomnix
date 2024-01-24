@@ -1,7 +1,7 @@
 { inputs, pkgs, ... }: {
   imports = [
 
-  
+
     ./global
     ./features/services/picom.nix
     ./features/services/nextcloud.nix
@@ -26,7 +26,7 @@
   home.packages = with pkgs; [
     vscodium
 
-    thunderbird 
+    thunderbird
     libreoffice-qt
     hunspell
     # move pkgs to own files, add hunspell language pkgs

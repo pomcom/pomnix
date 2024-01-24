@@ -40,6 +40,13 @@
         block = "load";
         interval = 1;
         format = " $icon $1m ";
+        click = [
+        {
+            button = "left";
+            cmd = "btop";
+          }
+
+        ];
       }
       { 
         block = "sound";
@@ -73,7 +80,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = "tokyo-night";
+    theme = "minimal.rasi";
     terminal = "kitty";
   };
 
@@ -100,7 +107,7 @@
         # "1" = [{ class = "Alacritty"; }];
         "2" = [{ class = "firefox-aurora"; }];
         "3" = [{ class = "obsidian"; }];
-        "4" = [{ class = "VMware Workstation"; }];
+        "4" = [{ class = "Vmware"; }];
         "9" = [{ class = "Chromium-browser"; }];
         "10" = [{ class = "KeePassXC"; } { class = "Signal"; }];
       };

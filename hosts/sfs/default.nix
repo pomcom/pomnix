@@ -15,6 +15,7 @@
     ../common/opt/polkit.nix
     ../common/opt/pipewire.nix
     ../common/opt/environment.nix
+    ../common/opt/thunar.nix
     ];
 
 nixpkgs.config.permittedInsecurePackages = [ 
@@ -59,7 +60,7 @@ hardware.opengl.extraPackages = with pkgs; [
 
 programs = {
     light.enable = true;
-    adb.enable = false;
+    adb.enable = true;
     zsh.enable = true;
     dconf.enable = true;
   };

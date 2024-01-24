@@ -15,16 +15,11 @@ environment.systemPackages = [
     pkgs.i3lock-fancy
     pkgs.wmctrl
     pkgs.volumeicon
-  #  pkgs.linuxKernel.packages.linux_5_15.vmware
-   # pkgs.linuxKernel.packages.linux_6_4.vmware
-  #  pkgs.linuxKernel.packages.linux_6_5.vmware
- #   pkgs.linuxKernel.packages.linux_5_15.tuxedo-keyboard
     pkgs.xorg.xf86videovmware
     pkgs.virt-manager
     #pkgs.vagrant
     pkgs.seafile-client
     #pkgs.citrix_workspace
-#    pkgs.vmware-horizon-client
     pkgs.networkmanager-openvpn
   ];
 
