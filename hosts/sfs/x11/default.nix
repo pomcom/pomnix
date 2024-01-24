@@ -2,7 +2,7 @@
 
 {
 
-environment.systemPackages = [
+  environment.systemPackages = [
 
     pkgs.xorg.xf86videoamdgpu
     pkgs.xclip
@@ -23,8 +23,8 @@ environment.systemPackages = [
     pkgs.networkmanager-openvpn
   ];
 
-services.xserver = {
-    enable = true;   
+  services.xserver = {
+    enable = true;
     desktopManager = {
       xterm.enable = false;
       xfce = {
@@ -37,14 +37,12 @@ services.xserver = {
     windowManager.i3.package = pkgs.i3-gaps;
     windowManager.i3.enable = true;
   };
-  
+
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
     xkbVariant = "";
-    videoDrivers = ["amdgpu"];
+    videoDrivers = [ "amdgpu" ];
   };
-
-
 
 }

@@ -1,4 +1,4 @@
- ''config.nix
+''config.nix
   general {
     gaps_in=2
     gaps_out=4
@@ -61,7 +61,6 @@ $w1 = hyprctl hyprpaper wallpaper "HDMI-A-1, ../../../resources/Wallpapers/nasa-
   exec-once=flameshot
   exec-once=mako
   exec-once=swayidle -w
-  exec-once=mullvad-gui
   exec-once=nm-applet --indicator
   exec-once=$w1
 

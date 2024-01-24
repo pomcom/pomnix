@@ -1,17 +1,14 @@
 { inputs, pkgs, ... }: {
   imports = [
 
-
     ./global
     ./features/services/picom.nix
     ./features/services/nextcloud.nix
     ./features/services/syncthing.nix
-    /* ./features/desktop/i3/config.nix */
 
-    ./features/desktop/i3/tuxi-config.nix
+    ./features/desktop/i3/i3.nix
 
     ./features/dev/java.nix
-
 
     ./features/desktop/common/apps.nix
     ./features/desktop/common/flameshot.nix

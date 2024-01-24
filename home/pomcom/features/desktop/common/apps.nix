@@ -14,8 +14,6 @@
     pdfchain
 
     spotify
-    mullvad-vpn
-
     onedrive
     joplin-desktop
 
@@ -23,20 +21,15 @@
     texmaker
 
     vlc
-    # sec audit
     lynis
 
     citrix_workspace
 
-    # vscode
-    # ltex-ls
-    # vscodium
     gnome.nautilus
     gparted
     gnome.gnome-disk-utility
 
     cryptomator
-
     nextcloud-client
 
   ];

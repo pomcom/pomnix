@@ -4,9 +4,9 @@
   imports = [
     # inputs.impermanence.nixosModules.impermanence
     inputs.home-manager.nixosModules.home-manager
-     ./locale.nix
-     ./nix.nix
-     # ./sops.nix
+    ./locale.nix
+    ./nix.nix
+    # ./sops.nix
   ] ++ (builtins.attrValues outputs.nixosModules);
 
   home-manager = {

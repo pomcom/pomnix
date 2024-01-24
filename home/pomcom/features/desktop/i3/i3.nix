@@ -10,72 +10,71 @@
   ];
 
   programs.i3status-rust = {
-  enable = true;
-  bars = {
-    top = {
-      blocks = [
+    enable = true;
+    bars = {
+      top = {
+        blocks = [
 
-      {
-        block = "disk_space";
-        path = "/";
-        info_type = "available";
-        interval = 60;
-        warning = 20.0;
-        alert = 10.0;
-      }
-
-      {
-        block = "memory";
-        interval = 5;
-        warning_mem = 80.0;
-        warning_swap = 80;
-        critical_mem = 95.0;
-        critical_swap = 95.0;
-      }
-      {
-        block = "cpu";
-        interval = 1;
-      }
-      {
-        block = "load";
-        interval = 1;
-        format = " $icon $1m ";
-        click = [
-        {
-            button = "left";
-            cmd = "btop";
+          {
+            block = "disk_space";
+            path = "/";
+            info_type = "available";
+            interval = 60;
+            warning = 20.0;
+            alert = 10.0;
           }
 
-        ];
-      }
-      { 
-        block = "sound";
-        click = [
-        {
-          button = "left";
-          cmd = "pavucontrol";
-        }
-        ];
+          {
+            block = "memory";
+            interval = 5;
+            warning_mem = 80.0;
+            warning_swap = 80;
+            critical_mem = 95.0;
+            critical_swap = 95.0;
+          }
+          {
+            block = "cpu";
+            interval = 1;
+          }
+          {
+            block = "load";
+            interval = 1;
+            format = " $icon $1m ";
+            click = [
+              {
+                button = "left";
+                cmd = "btop";
+              }
 
-      }
-      {
-        block = "time";
-        interval = 60;
-        format = " $timestamp.datetime(f:'%a %d/%m %R') ";
-      }
-      ];
-      settings = {
-        theme =  {
-          theme = "gruvbox-dark";
-          overrides = {
+            ];
+          }
+          {
+            block = "sound";
+            click = [
+              {
+                button = "left";
+                cmd = "pavucontrol";
+              }
+            ];
+
+          }
+          {
+            block = "time";
+            interval = 60;
+            format = " $timestamp.datetime(f:'%a %d/%m %R') ";
+          }
+        ];
+        settings = {
+          theme = {
+            theme = "gruvbox-dark";
+            overrides = { };
           };
         };
+        icons = "awesome6";
+        theme = "gruvbox-dark";
       };
-      icons = "awesome6";
-      theme = "gruvbox-dark";
-    };
 
-  };
+    };
   };
 
   programs.rofi = {
@@ -99,10 +98,10 @@
         smartBorders = "on";
       };
 
-# applications on specific workspaces
-# reminder: xprop for class names
-#'class' matches the 'WM_CLASS': xprop | grep WM_CLASS
-## 'title' matches the 'WM_NAME': xprop | grep WM_NAME
+      # applications on specific workspaces
+      # reminder: xprop for class names
+      #'class' matches the 'WM_CLASS': xprop | grep WM_CLASS
+      ## 'title' matches the 'WM_NAME': xprop | grep WM_NAME
       assigns = {
         # "1" = [{ class = "Alacritty"; }];
         "2" = [{ class = "firefox-aurora"; }];
@@ -112,7 +111,7 @@
         "10" = [{ class = "KeePassXC"; } { class = "Signal"; }];
       };
 
-      floating.criteria = [ 
+      floating.criteria = [
         { title = "Cryptomator"; }
         { class = "Cryptomator"; }
         { class = "DialogBox"; title = "Settings"; }
@@ -125,20 +124,19 @@
         statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs /home/pomcom/.config/i3status-rust/config-top.toml";
         mode = "dock";
         position = "top";
-         fonts = {
-           size = 13.0;
-           names = ["Hack Nerd Font Mono"];
-         };
+        fonts = {
+          size = 13.0;
+          names = [ "Hack Nerd Font Mono" ];
+        };
         trayOutput = "primary";
         trayPadding = 1;
 
-      }
-      ];
+      }];
 
       startup = [
-        {command = "greenclip daemon >/dev/null";}
-        {command = "${pkgs.autotiling}/bin/autotiling";}
-        {command = "${pkgs.volumeicon}/bin/volumeicon";}
+        { command = "greenclip daemon >/dev/null"; }
+        { command = "${pkgs.autotiling}/bin/autotiling"; }
+        { command = "${pkgs.volumeicon}/bin/volumeicon"; }
       ];
 
       keybindings = lib.mkOptionDefault (
@@ -170,17 +168,17 @@
           "${mod}+m" = "exec ${pkgs.rofi}/bin/rofi -show";
           "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
           "${mod}+b" = "exec ${pkgs.rofi}/bin/rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'";
-          "${mod}+u" = "exec ${pkgs.rofi}/bin/rofi -show ssh"; 
+          "${mod}+u" = "exec ${pkgs.rofi}/bin/rofi -show ssh";
           "${mod}+Shift+x" = "exec ${pkgs.rofi}/bin/rofi -show p -modi p:'rofi-power-menu'";
           "${mod}+x" = "exec ${pkgs.i3lock-fancy}/bin/i3lock-fancy";
           "${mod}+p" = "exec ${pkgs.flameshot}/bin/flameshot gui";
           "${mod}+t" = "exec /home/pomcom/tools/scripts-public/rofi-script/tmux_session.sh";
- 
-           
+
+
           "${mod}+g" = "exec ${scriptpath}/rofi_script_runner.sh";
 
 
-          "${mod}+Tab" =  "workspace back_and_forth";
+          "${mod}+Tab" = "workspace back_and_forth";
 
           "${mod}+${left}" = "focus left";
           "${mod}+${down}" = "focus down";
@@ -261,7 +259,7 @@
     };
     extraConfig =
       ''
-     client.focused #E65100 #EF6C00 #FFFFFF #FB8C00 #E65100
+        client.focused #E65100 #EF6C00 #FFFFFF #FB8C00 #E65100
       
       ''
     ;
