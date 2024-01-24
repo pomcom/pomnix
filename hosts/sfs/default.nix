@@ -1,64 +1,66 @@
 # sfs
-{ config, pkgs, lib, inputs, user, outputs,  ... }:
+{ config, pkgs, lib, inputs, user, outputs, ... }:
 
 {
   imports =
-    [ 
-    ./hardware-configuration.nix
+    [
+      ./hardware-configuration.nix
 
-    ./x11/default.nix
+      ./x11/default.nix
 
-    ../common/global
-    ../common/users/pomcom
+      ../common/global
+      ../common/users/pomcom
 
-    ../common/opt/virtualisation.nix
-    ../common/opt/polkit.nix
-    ../common/opt/pipewire.nix
-    ../common/opt/environment.nix
-    ../common/opt/thunar.nix
+      ../common/opt/virtualisation.nix
+      ../common/opt/polkit.nix
+      ../common/opt/pipewire.nix
+      ../common/opt/environment.nix
+      ../common/opt/thunar.nix
     ];
 
-nixpkgs.config.permittedInsecurePackages = [ 
-     lib.optional (pkgs.obsidian.version == "0.4.16") "electron-25.9.0"
-];
+  nixpkgs.config.permittedInsecurePackages = [
+    lib.optional
+    (pkgs.obsidian.version == "0.4.16")
+    "electron-25.9.0"
+  ];
 
 
-services.greetd.settings.default_session.user = "pomcom"; 
+  services.greetd.settings.default_session.user = "pomcom";
 
-networking.hostName = "sfs"; 
-networking.networkmanager.enable = true;
-
-
-boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
-
-boot.loader.systemd-boot.enable = true;
-boot.loader.efi.canTouchEfiVariables = true;
+  networking.hostName = "sfs";
+  networking.networkmanager.enable = true;
 
 
-services.dbus.packages = [ pkgs.gcr ];
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
 
-services.mullvad-vpn.enable = true;
-services.udisks2.enable = true;
-services.fwupd.enable = false;
-
-powerManagement.powertop.enable = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
 
-# needed for hashcat
-hardware.opengl.extraPackages = with pkgs; [
-  rocm-opencl-icd
-  rocm-opencl-runtime
-];
+  services.dbus.packages = [ pkgs.gcr ];
 
- networking.extraHosts =
-  ''
-    10.12.12.5 seafile.spike.local
-    10.12.12.4 git.spike.local
-    10.12.12.6 ipa.spike.local
-  '';
+  services.mullvad-vpn.enable = true;
+  services.udisks2.enable = true;
+  services.fwupd.enable = false;
+
+  powerManagement.powertop.enable = true;
 
 
-programs = {
+  # needed for hashcat
+  hardware.opengl.extraPackages = with pkgs; [
+    rocm-opencl-icd
+    rocm-opencl-runtime
+  ];
+
+  networking.extraHosts =
+    ''
+      10.12.12.5 seafile.spike.local
+      10.12.12.4 git.spike.local
+      10.12.12.6 ipa.spike.local
+    '';
+
+
+  programs = {
     light.enable = true;
     adb.enable = true;
     zsh.enable = true;
@@ -66,7 +68,7 @@ programs = {
   };
 
 
- services.logind ={
+  services.logind = {
     lidSwitch = "suspend";
     lidSwitchExternalPower = "lock";
   };

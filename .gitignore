@@ -1,2 +1,3 @@
 
 home/pomcom/features/cli/proxychains.nix
+local-hosts
