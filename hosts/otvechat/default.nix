@@ -15,19 +15,13 @@
 
   fonts.fonts = with pkgs; [
     pkgs.rPackages.fontawesome
-  
-];
+
+  ];
 
   networking = {
     hostName = "otvechat";
     networkmanager.enable = true;
   };
-
-
-   networking.extraHosts = ''
-     10.12.12.5 seafile.spike.local
-     10.12.12.4  git.spike.local
-   '';
 
   services = {
     dbus.packages = [ pkgs.gcr ];

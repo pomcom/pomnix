@@ -78,14 +78,6 @@
 
   # networking.extraHosts = config.sops.secrets.networking.extraHosts;
 
-  networking.extraHosts =
-    ''
-      10.12.12.5 seafile.spike.local
-      10.12.12.4 git.spike.local
-      10.12.12.6 ipa.spike.local
-      10.12.12.20    kali.spike.local kali-scan.spike.local nessus.spike.local scan.spike.local
-    '';
-
   hardware.bluetooth.enable = true;
 
   services.logind = {

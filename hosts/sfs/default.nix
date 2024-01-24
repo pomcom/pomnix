@@ -16,6 +16,7 @@
       ../common/opt/pipewire.nix
       ../common/opt/environment.nix
       ../common/opt/thunar.nix
+      # ../../hosts
     ];
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -29,7 +30,6 @@
 
   networking.hostName = "sfs";
   networking.networkmanager.enable = true;
-
 
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
 
@@ -52,12 +52,7 @@
     rocm-opencl-runtime
   ];
 
-  networking.extraHosts =
-    ''
-      10.12.12.5 seafile.spike.local
-      10.12.12.4 git.spike.local
-      10.12.12.6 ipa.spike.local
-    '';
+  # networking.hostFiles = [ "/etc/nixos/local-hosts.nix" ];
 
 
   programs = {
