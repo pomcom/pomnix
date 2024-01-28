@@ -93,8 +93,7 @@
           };
 
           "pomcom@kali" = home-manager.lib.homeManagerConfiguration {
-            # defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
-            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            pkgs = import nixpkgs { system = "x86_64-linux"; };
             extraSpecialArgs = { inherit inputs outputs; };
             modules = [ ./home/pomcom/kali.nix ];
           };
