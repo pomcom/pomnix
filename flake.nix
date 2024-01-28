@@ -49,6 +49,8 @@
       devShells = forEachPkgs (pkgs: import ./shell.nix { inherit pkgs; });
       formatter = forEachPkgs (pkgs: pkgs.nixpkgs-fmt);
 
+      defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
       # nixos-rebuild build --flake .#your-hostname
