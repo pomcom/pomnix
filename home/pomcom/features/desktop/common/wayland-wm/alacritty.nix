@@ -2,16 +2,16 @@
 
 {
 
- programs.alacritty = {
+  programs.alacritty = {
     enable = true;
-    
+
     settings = {
       # import = [ pkgs.alacritty-theme.tokyo-night ];
       env.TERM = "xterm-256color";
       font = {
         size = 11.0;
         normal = {
-          family= "Hack Nerd Font Mono";
+          family = "Hack Nerd Font Mono";
           style = "Regular";
         };
         bold = {
@@ -27,7 +27,7 @@
         decorations = "full";
         title = "Alacritty";
         opacity = 1;
-        dynamicPadding = true;
+        # dynamicPadding = true;
         padding = {
           x = 0;
           y = 0;
@@ -36,7 +36,7 @@
       mouse = {
         hide_when_typing = false;
       };
-      key_bindings = [
+      keyboard.bindings = [
         { key = "I"; mods = "Control"; chars = "\e[105;5u"; }
         { key = "I"; mods = "Control|Shift"; chars = "\e[105;6u"; }
 
@@ -54,7 +54,7 @@
     };
   };
 
-    }
+}
 
 
 

@@ -8,5 +8,7 @@
     ./js.nix
     ./python.nix
     ./rust.nix
+    ./typst.nix
+    ./jekyll.nix
   ];
 }
