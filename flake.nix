@@ -62,7 +62,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./hosts/tuxi
-            inputs.tuxedo-nixos.nixosModules.default
+            # inputs.tuxedo-nixos.nixosModules.default
           ];
         };
 
@@ -85,7 +85,6 @@
 
         # Standalone home-manager configuration entrypoint
         # Available through 'home-manager --flake .#your-username@your-hostname'
-        defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
 
         homeConfigurations = {
           "pomcom@tuxi" = home-manager.lib.homeManagerConfiguration {

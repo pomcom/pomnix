@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-
+#tuxi
   environment.systemPackages = [
 
     pkgs.xorg.xf86videoamdgpu
@@ -15,13 +15,13 @@
     pkgs.i3lock-fancy
     pkgs.wmctrl
     pkgs.volumeicon
-    pkgs.linuxKernel.packages.linux_5_15.vmware
-    pkgs.linuxKernel.packages.linux_5_15.tuxedo-keyboard
+    pkgs.linuxKernel.packages.linux_6_5.vmware
+    # pkgs.linuxKernel.packages.linux_5_15.tuxedo-keyboard
     pkgs.xorg.xf86videovmware
     pkgs.virt-manager
     pkgs.vagrant
     pkgs.seafile-client
-    pkgs.citrix_workspace
+    # pkgs.citrix_workspace
     pkgs.vmware-horizon-client
     pkgs.networkmanager-openvpn
   ];
@@ -37,11 +37,10 @@
       };
     };
     displayManager = {
-      defaultSession = "xfce";
+      defaultSession = "xfce+i3";
       lightdm = {
         enable = true;
         greeter.enable = true;
-
       };
 
     };
@@ -54,7 +53,7 @@
   services.xserver = {
     layout = "us";
     xkbVariant = "";
-    videoDrivers = [ "modsetting" ];
+    videoDrivers = [ "amdgpu" ];
   };
 
 }

@@ -16,7 +16,7 @@
     ./features/services/blueman.nix
     ./features/services/picom.nix
 
-    ./features/desktop/i3/.nix
+    ./features/desktop/i3/i3.nix
   ];
 
   home.packages = with pkgs; [

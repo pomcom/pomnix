@@ -23,7 +23,7 @@
     vlc
     lynis
 
-    citrix_workspace
+    # citrix_workspace
 
     gnome.nautilus
     gparted

@@ -17,6 +17,12 @@
       defaultNetwork.settings.dns_enabled = true;
     };
     vmware.host.enable = true;
+    vmware.host.extraConfig = {
+        ''
+        mks.gl.allowUnsupportedDrivers = "TRUE"
+        mks.vk.allowUnsupportedDevices = "TRUE"
+        ''
+      };
 
     libvirtd.enable = true;
 
