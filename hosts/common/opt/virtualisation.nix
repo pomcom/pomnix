@@ -16,13 +16,13 @@
       dockerCompat = false;
       defaultNetwork.settings.dns_enabled = true;
     };
-    vmware.host.enable = true;
-    vmware.host.extraConfig = {
-        ''
-        mks.gl.allowUnsupportedDrivers = "TRUE"
-        mks.vk.allowUnsupportedDevices = "TRUE"
-        ''
+
+    vmware = {
+      host = {
+        enable = true;
+        extraPackages = with pkgs; [ xorg.xf86videovmware open-vm-tools linuxKernel.packages.linux_6_5.vmware];
       };
+    };
 
     libvirtd.enable = true;
 
@@ -36,7 +36,7 @@
         x11 = true;
       };
     };
-  };
 
+  };
 }
-  
+
