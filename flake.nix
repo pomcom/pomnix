@@ -26,8 +26,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs";
     };
-
-
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -35,7 +33,6 @@
       inherit (self) outputs;
       forEachSystem = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" ];
       forEachPkgs = f: forEachSystem (sys: f nixpkgs.legacyPackages.${sys});
-      sys = "x86_64-linux";
     in
     {
       nixosModules = import ./modules/nixos;
@@ -80,6 +77,7 @@
             ./hosts/sfs
             inputs.tuxedo-nixos.nixosModules.default
           ];
+          };
         };
 
 
@@ -101,6 +99,5 @@
 
         };
       };
-    };
 }
 
