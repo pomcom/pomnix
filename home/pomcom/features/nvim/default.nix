@@ -15,9 +15,9 @@
 
     extraPackages = with pkgs; [
       # Language Servers
-      # gopls
+      gopls
       # rnix-lsp
-      lua-language-server
+      # lua-language-server
       # java-language-server
     ];
 

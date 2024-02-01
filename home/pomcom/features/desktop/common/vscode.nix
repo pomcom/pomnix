@@ -5,7 +5,6 @@
     extensions = [
       pkgs.vscode-extensions.bbenoist.nix
       pkgs.vscode-extensions.valentjn.vscode-ltex
-
     ];
   };
 }
