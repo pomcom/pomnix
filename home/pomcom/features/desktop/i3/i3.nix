@@ -79,7 +79,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = "tokyo-night.rasi";
+    theme = "minimal-dark.rasi";
     terminal = "kitty";
   };
 
