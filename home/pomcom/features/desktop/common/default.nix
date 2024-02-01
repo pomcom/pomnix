@@ -19,7 +19,7 @@
     ./vscode.nix
   ];
 
-  xdg.mimeApps.enable = true;
+  xdg.mimeApps.enable = false;
   home.packages = with pkgs; [
     # xdg-utils-spawn-terminal
   ];
