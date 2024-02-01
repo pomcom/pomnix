@@ -79,7 +79,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = "minimal-dark.rasi";
+    theme = "minimal.rasi";
     terminal = "alacritty";
   };
 
