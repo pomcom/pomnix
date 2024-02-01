@@ -80,7 +80,7 @@
   programs.rofi = {
     enable = true;
     theme = "minimal-dark.rasi";
-    terminal = "kitty";
+    terminal = "alacritty";
   };
 
   xsession.windowManager.i3 = {
