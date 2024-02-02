@@ -50,21 +50,6 @@
 
       ];
 
-
-      bars = [{
-
-        statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs /home/pomcom/.config/i3status-rust/config-top.toml";
-        mode = "dock";
-        position = "top";
-        fonts = {
-          size = 13.0;
-          names = [ "Hack Nerd Font Mono" ];
-        };
-        trayOutput = "primary";
-        trayPadding = 1;
-
-      }];
-
       startup = [
         { command = "greenclip daemon >/dev/null"; }
         { command = "${pkgs.autotiling}/bin/autotiling"; }
