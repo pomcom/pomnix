@@ -46,10 +46,9 @@
 
       startup = [
         { command = "greenclip daemon >/dev/null"; }
-        { command = "${pkgs.autotiling}/bin/autotiling"; }
-        { command = "${pkgs.volumeicon}/bin/volumeicon"; }
-        { command = "$/usr/bin/vmware-user"; }
-        { command = "$/usr/bin/nm-applet"; }
+        { command = "/home/pomcom/.nix-profile/bin/autotiling"; }
+        { command = "/usr/bin/vmware-user"; }
+        { command = "/usr/bin/nm-applet"; }
       ];
 
       keybindings = lib.mkOptionDefault (
