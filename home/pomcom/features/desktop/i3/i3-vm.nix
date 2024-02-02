@@ -10,17 +10,10 @@
     i3status-rust
   ];
 
-  # bars = [
-  #       {
-  #         position = "bottom";
-  #         statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
-  #       }
-  #     ];
-
    programs.rofi = {
     enable = true;
     theme = "minimal.rasi";
-    terminal = "alacritty";
+    terminal = "kitty";
   };
 
   xsession.windowManager.i3 = {
