@@ -7,6 +7,7 @@
     rofi-power-menu
     haskellPackages.greenclip
     xorg.xmodmap
+    i3status-rust
   ];
 
   bars = [
