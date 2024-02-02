@@ -5,7 +5,6 @@
     keepmenu
     autotiling
     rofi-power-menu
-    haskellPackages.greenclip
     xorg.xmodmap
     i3status-rust
   ];
@@ -45,10 +44,11 @@
       ];
 
       startup = [
-        { command = "greenclip daemon >/dev/null"; }
         { command = "/home/pomcom/.nix-profile/bin/autotiling"; }
         { command = "/usr/bin/vmware-user"; }
+        { command = "/usr/bin/xfce4-clipman"; }
         { command = "/usr/bin/nm-applet"; }
+        { command = "/usr/bin/nitrogen --restore"; }
       ];
 
       keybindings = lib.mkOptionDefault (
@@ -79,7 +79,7 @@
 
           "${mod}+m" = "exec ${pkgs.rofi}/bin/rofi -show";
           "${mod}+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
-          "${mod}+b" = "exec ${pkgs.rofi}/bin/rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'";
+          "${mod}+b" = "exec /usr/bin/xfce4-clipman-history";
           "${mod}+u" = "exec ${pkgs.rofi}/bin/rofi -show ssh";
           "${mod}+Shift+x" = "exec ${pkgs.rofi}/bin/rofi -show p -modi p:'rofi-power-menu'";
           "${mod}+x" = "exec ${pkgs.i3lock-fancy}/bin/i3lock-fancy";
