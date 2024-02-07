@@ -25,6 +25,9 @@
     "electron-25.9.0"
   ];
 
+  services.cron = {
+      enable = true;
+    };
 
   services.greetd.settings.default_session.user = "pomcom";
 
