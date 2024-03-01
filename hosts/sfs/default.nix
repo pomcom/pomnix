@@ -48,7 +48,6 @@
 
   powerManagement.powertop.enable = true;
 
-
   # needed for hashcat
   hardware.opengl.extraPackages = with pkgs; [
     rocm-opencl-icd
@@ -56,7 +55,6 @@
   ];
 
   # networking.hostFiles = [ "/etc/nixos/local-hosts.nix" ];
-
 
   programs = {
     light.enable = true;

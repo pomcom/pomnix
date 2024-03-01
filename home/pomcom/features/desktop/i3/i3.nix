@@ -88,7 +88,7 @@
 
     config = rec {
       modifier = "Mod4";
-      terminal = "kitty";
+      terminal = "alacritty";
       workspaceAutoBackAndForth = true;
 
       gaps = {
