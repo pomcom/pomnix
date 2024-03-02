@@ -20,7 +20,7 @@
     vmware = {
       host = {
         enable = true;
-        extraPackages = with pkgs; [ xorg.xf86videovmware open-vm-tools linuxKernel.packages.linux_6_5.vmware];
+        extraPackages = with pkgs; [ xorg.xf86videovmware open-vm-tools ];
       };
     };
 

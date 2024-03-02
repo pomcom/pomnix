@@ -34,7 +34,7 @@
   networking.hostName = "sfs";
   networking.networkmanager.enable = true;
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_5;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -58,7 +58,7 @@
 
   programs = {
     light.enable = true;
-    adb.enable = true;
+    adb.enable = false;
     zsh.enable = true;
     dconf.enable = true;
   };
