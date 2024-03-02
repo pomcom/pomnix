@@ -26,9 +26,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs:
     let
       inherit (self) outputs;
       forEachSystem = nixpkgs.lib.genAttrs [ "x86_64-linux" "aarch64-linux" ];
@@ -59,7 +64,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./hosts/tuxi
-            # inputs.tuxedo-nixos.nixosModules.default
+            # inputs.tuxedo-nixos.mnixosModules.default
           ];
         };
 
