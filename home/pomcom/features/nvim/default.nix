@@ -111,7 +111,7 @@
 
       trouble.enable = true;
 
-      oil.enable = true;
+      neo-tree.enable = true;
 
       which-key.enable = true;
 

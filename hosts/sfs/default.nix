@@ -26,8 +26,8 @@
   ];
 
   services.cron = {
-      enable = true;
-    };
+    enable = true;
+  };
 
   services.greetd.settings.default_session.user = "pomcom";
 
@@ -42,7 +42,6 @@
 
   services.dbus.packages = [ pkgs.gcr ];
 
-  services.mullvad-vpn.enable = true;
   services.udisks2.enable = true;
   services.fwupd.enable = false;
 
