@@ -27,12 +27,14 @@
   programs = {
     home-manager.enable = true;
     git.enable = true;
-    #zsh.enable = true;	
+    zsh.enable = true;	
 
   };
 
   home = {
     username = lib.mkDefault "pomcom";
+   
+
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "22.05";
 

@@ -72,7 +72,6 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./hosts/otvechat
-            inputs.tuxedo-nixos.nixosModules.default
           ];
         };
 
@@ -83,6 +82,7 @@
             inputs.tuxedo-nixos.nixosModules.default
           ];
           };
+
         };
 
 
