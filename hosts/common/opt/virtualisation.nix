@@ -26,16 +26,17 @@
 
     libvirtd.enable = true;
 
-    virtualbox = {
-      host = {
-        enable = false;
-        enableExtensionPack = true;
-      };
-      guest = {
-        enable = true;
-        x11 = true;
-      };
-    };
+    # virtualbox = {
+    #   host = {
+    #     enable = false;
+    #     enableExtensionPack = true;
+    #     # users.extraGroups.vboxusers.members = [ "pomcom" ];
+    #   };
+    #   guest = {
+    #     enable = true;
+    #     # x11 = true;
+    #   };
+    # };
 
   };
 }

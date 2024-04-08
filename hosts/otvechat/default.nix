@@ -1,4 +1,3 @@
-# Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -6,7 +5,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
       ./x11/default.nix
@@ -20,8 +20,10 @@
       ../common/opt/polkit.nix
       ../common/opt/pipewire.nix
       ../common/opt/environment.nix
+      ../common/opt/mullvad.nix
     ];
 
+  
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -41,30 +43,39 @@
     enable = false;
   };
 
-  # Enable the X11 windowing system.
-  #services.xserver.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "pomcom" ];
+
+
+
+
+ 
+# Enable the X11 windowing system.
+#services.xserver.enable = true;
 
   # Enable the XFCE Desktop Environment.
   #services.xserver.displayManager.lightdm.enable = true;
   #services.xserver.desktopManager.xfce.enable = true;
 
   # Configure keymap in X11
-  
+
   #services.xserver = {
-   # layout = "us";
-   # xkbVariant = "";
+  # layout = "us";
+  # xkbVariant = "";
   #};
 
 
+  hardware.bluetooth.enable = true;
 
   programs = {
-    
-    zsh.enable = true;	
+
+    zsh.enable = true;
+    adb.enable = true;
 
   };
 
 
-  # Enable touchpad support (enabled default in most desktopManager).
+  # Enable touchpad support (enabled default in most desktopManager)
   # services.xserver.libinput.enable = true;
 
 

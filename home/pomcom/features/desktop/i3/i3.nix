@@ -137,6 +137,8 @@
         { command = "greenclip daemon >/dev/null"; }
         { command = "${pkgs.autotiling}/bin/autotiling"; }
         { command = "${pkgs.volumeicon}/bin/volumeicon"; }
+        { command = "/run/current-system/sw/bin/nitrogen --restore"; }
+        { command = "/etc/profiles/per-user/pomcom/bin/xmodmap ~/pomnix/.Xmodmap"; }
       ];
 
       keybindings = lib.mkOptionDefault (

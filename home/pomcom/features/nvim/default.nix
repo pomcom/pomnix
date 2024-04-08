@@ -116,41 +116,41 @@
       which-key.enable = true;
 
 
-      obsidian = {
-        enable = true;
-        workspaces = [
-          {
-            name = "k-base";
-            path = "/home/pomcom/k-base";
-          }
-        ];
-      };
-
-      nvim-cmp = {
-        enable = true;
-        autoEnableSources = true;
-        sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
-        ];
-
-        mapping = {
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
-          "<C-e>" = "cmp.mapping.close()";
-          "<C-f>" = "cmp.mapping.scroll_docs(4)";
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
-          "<C-p>" = {
-            action = "cmp.mapping.select_prev_item()";
-            modes = [ "i" "s" ];
-          };
-          "<C-n>" = {
-            action = "cmp.mapping.select_next_item()";
-            modes = [ "i" "s" ];
-          };
-        };
-      };
+      # obsidian = {
+      #   enable = true;
+      #   workspaces = [
+      #     {
+      #       name = "k-base";
+      #       path = "/home/pomcom/k-base";
+      #     }
+      #   ];
+      # };
+      #
+      # cmp = {
+      #   enable = true;
+      #   autoEnableSources = true;
+      #   sources = [
+      #     { name = "nvim_lsp"; }
+      #     { name = "path"; }
+      #     { name = "buffer"; }
+      #   ];
+      #
+      #   mapping.preset.insert = {
+      #     "<C-Space>" = "cmp.mapping.complete()";
+      #     "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+      #     "<C-e>" = "cmp.mapping.close()";
+      #     "<C-f>" = "cmp.mapping.scroll_docs(4)";
+      #     "<CR>" = "cmp.mapping.confirm({ select = true })";
+      #     "<C-p>" = {
+      #       action = "cmp.mapping.select_prev_item()";
+      #       modes = [ "i" "s" ];
+      #     };
+      #     "<C-n>" = {
+      #       action = "cmp.mapping.select_next_item()";
+      #       modes = [ "i" "s" ];
+      #     };
+      #   };
+      # };
     };
 
     extraPlugins = with pkgs.vimPlugins; [
