@@ -4,6 +4,6 @@
 {
 programs.wezterm = {
   enable = true;
-  extraConfig = builtins.readfile ./config.lua;
+  extraConfig = builtins.readFile ./config.lua;
 };
 }

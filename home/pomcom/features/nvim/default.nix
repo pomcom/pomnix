@@ -95,7 +95,7 @@
 
       barbar.enable = true;
 
-      comment-nvim.enable = true;
+      comment.enable = true;
 
       todo-comments.enable = true;
 
