@@ -2,7 +2,7 @@
 {
   imports = [
     ./keepassxc.nix
-    ./obsidian.nix
+    # ./obsidian.nix
     ./font.nix
     ./gtk.nix
     ./pavucontrol.nix
@@ -17,6 +17,7 @@
     ./flameshot.nix
     ./kitty.nix
     ./vscode.nix
+    ./wezterm/wezterm.nix
   ];
 
   xdg.mimeApps.enable = false;

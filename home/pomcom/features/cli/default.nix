@@ -31,6 +31,8 @@
     killall
     neofetch
     file
+    tree
+    lshw
 
     gnupg
 
@@ -42,8 +44,6 @@
 
     restic
     sshfs
-
-    mitmproxy
 
     bandwhich
     ctop
@@ -65,7 +65,6 @@
     sd
     tre
 
-    nixpkgs-fmt
   ];
 
 }

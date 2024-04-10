@@ -10,11 +10,12 @@
 
     ./features/desktop/common/wayland-wm/alacritty.nix
 
-    ./features/services/nextcloud.nix
+    # ./features/services/nextcloud.nix
     ./features/services/udiskie.nix
     ./features/services/syncthing.nix
     ./features/services/blueman.nix
     ./features/services/picom.nix
+    ./features/services/espanso.nix
 
     ./features/desktop/i3/i3.nix
   ];
