@@ -10,8 +10,6 @@
         ./features/desktop/common/font.nix
     ];
 
-
-
     home.packages = with pkgs; [
 
     ];
