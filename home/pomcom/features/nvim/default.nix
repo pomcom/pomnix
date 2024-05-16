@@ -23,7 +23,7 @@
       shiftwidth = 2;
     };
 
-    colorschemes.kanagawa.enable = true;
+    colorschemes.ayu.enable = true;
 
     keymaps = [
       {

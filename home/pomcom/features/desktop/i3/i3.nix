@@ -66,12 +66,12 @@
         ];
         settings = {
           theme = {
-            theme = "gruvbox-dark";
+            theme = "plain";
             overrides = { };
           };
         };
-        icons = "awesome6";
-        theme = "gruvbox-dark";
+        icons = "none";
+        theme = "plain";
       };
 
     };

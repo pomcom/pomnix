@@ -6,10 +6,10 @@
     enable = true;
 
     settings = {
-      # import = [ pkgs.alacritty-theme.tokyo-night ];
+      import = [ pkgs.alacritty-theme.alabaster_dark];
       env.TERM = "xterm-256color";
       font = {
-        size = 8.0;
+        size = 11.0;
         normal = {
           family = "Hack Nerd Font Mono";
           style = "Regular";
