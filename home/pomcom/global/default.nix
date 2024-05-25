@@ -27,7 +27,7 @@
   programs = {
     home-manager.enable = true;
     git.enable = true;
-    zsh.enable = true;	
+    zsh.enable = false;	
 
   };
 
