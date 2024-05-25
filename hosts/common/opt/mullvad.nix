@@ -11,5 +11,4 @@
   # TODO Currently needed for bugfix
   services.resolved.enable = true;
 
-
 }

@@ -16,7 +16,7 @@
       ../common/opt/pipewire.nix
       ../common/opt/environment.nix
       ../common/opt/thunar.nix
-      # ../../hosts
+      ../common/opt/mullvad.nix
     ];
 
   nixpkgs.config.permittedInsecurePackages = [
