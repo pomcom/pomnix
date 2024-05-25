@@ -79,9 +79,16 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             ./hosts/sfs
-            inputs.tuxedo-nixos.nixosModules.default
           ];
           };
+
+        apex = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/apex
+          ];
+          };
+
 
         };
 
