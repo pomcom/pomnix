@@ -1,7 +1,7 @@
 { config, lib, pkgs, user, ... }:
 {
   services.nextcloud-client = {
-    enable = false;
+    enable = true;
     startInBackground = true;
   };
 }

@@ -3,7 +3,7 @@
     ./bat.nix
     ./git.nix
     ./zsh.nix
-    ./tmux.nix
+    ./tmux
     ./pentest.nix
     ./compression.nix
   ];
@@ -12,7 +12,6 @@
 
     ranger
     mc
-    eza
     fd
     lsof
     httpie
@@ -64,6 +63,10 @@
     ripgrep
     sd
     tre
+
+    pdftk
+    tree
+    steam-run
 
   ];
 

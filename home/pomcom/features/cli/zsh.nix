@@ -38,6 +38,8 @@
 
     initExtra = ''
 
+      eval "$(ssh-agent)" >/dev/null
+
       # helper to make modifiable copy of immutable link to nix store
       function tinker() {
         FILE=$1
@@ -53,13 +55,18 @@
 
     shellAliases = {
 
-      myip = "curl ifconfig.me";
-      ll = "exa -lbF --git";
-      llm = "exa -lbGd --git --sort=modified";
+      vile = "nvim -c 'Telescope find_files'";
 
+
+      myip = "curl ifconfig.me";
+
+      ls = "exa";
+      ll = "ls -alh";
+      la = "ls -a";
       ld = "ls -ad";
-      tree = "la --tree";
-      trees = "tree --depth 4";
+      # tree = "la --tree";
+      # trees = "tree --depth 4";
+      
 
       ".." = "cd ../";
       "..." = "cd ../../";
@@ -74,7 +81,6 @@
       mycolors = "msgcat --color=test";
       view = "zathura";
 
-      # pbcopy and pbpaste
       pbcopy = "xclip -selection clipboard";
       pbpaste = "xclip -selection clipboard -o";
 
@@ -94,13 +100,18 @@
       nmap_web_safe_osscan = "sudo nmap -p 80,443 -O -v --osscan-guess --fuzzy ";
       nmap_ping_scan = "nmap -n -sP";
 
-      p = "termpdf.py";
-      i = "pixcat";
-
     };
   };
 
-  programs.autojump.enable = true;
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+    options = [
+      "--cmd j"
+    ];
+  };
+
+  programs.eza.enable = true;
 
   programs.fzf = {
     enable = true;
@@ -118,6 +129,11 @@
     };
   };
 
+  programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
@@ -131,6 +147,7 @@
       tabstop = 2;
       expandtab = true;
     };
-  };
 
+
+  };
 }

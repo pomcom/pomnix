@@ -6,7 +6,6 @@
 
     pkgs.xorg.xf86videoamdgpu
     pkgs.xclip
-    #pkgs.light
     pkgs.playerctl
     pkgs.pamixer
     pkgs.mpv
@@ -19,8 +18,6 @@
     pkgs.virt-manager
     #pkgs.vagrant
     pkgs.seafile-client
-    #pkgs.citrix_workspace
-    pkgs.networkmanager-openvpn
   ];
 
   services.xserver = {
