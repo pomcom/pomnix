@@ -6,8 +6,10 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
+      ../common/global
+      ../common/users/pomcom
     ];
 
   # Bootloader.
@@ -50,12 +52,12 @@
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.pomcom = {
-    isNormalUser = true;
-    description = "pomcom";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
+  # users.users.pomcom = {
+  #   isNormalUser = true;
+  #   description = "pomcom";
+  #   extraGroups = [ "networkmanager" "wheel" ];
+  #   packages = with pkgs; [];
+  # };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
