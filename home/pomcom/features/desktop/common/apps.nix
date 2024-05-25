@@ -10,18 +10,15 @@
 
     okular
     zathura
-    pdftk
     pdfchain
 
     spotify
     onedrive
-    joplin-desktop
 
     texlive.combined.scheme-full
     texmaker
 
     vlc
-    lynis
 
     # citrix_workspace
 
@@ -30,7 +27,6 @@
     gnome.gnome-disk-utility
 
     cryptomator
-    nextcloud-client
 
   ];
 }
