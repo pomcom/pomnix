@@ -27,7 +27,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  programs.zsh.enable
+  programs.zsh.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
