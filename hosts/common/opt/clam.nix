@@ -1,7 +1,7 @@
 { config, lib, pkgs, user, ... }:
 {
   services.clamav = {
-    daemon.enable = false;
-    updater.enable = false;
+    daemon.enable = true;
+    updater.enable = true;
   };
 }
