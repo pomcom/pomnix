@@ -47,9 +47,22 @@
   users.extraGroups.vboxusers.members = [ "pomcom" ];
 
 
+  networking.extraHosts = 
+    ''
+    10.11.11.254    gw.spike.local
+    10.11.11.1    vm.spike.local
+    10.12.12.4     git.spike.local
+    10.12.12.5    seafile.spike.local
+    10.12.12.6    ipa.spike.local
+    10.12.12.7    doc.spike.local
+    10.12.12.20    kali.spike.local kali-scan.spike.local nessus.spike.local scan.spike.local
+    10.12.12.10    jenkins.spike.local
+    10.12.12.34    burp.spike.local
+    ''
+    ;
 
 
- 
+
 # Enable the X11 windowing system.
 #services.xserver.enable = true;
 

@@ -9,7 +9,7 @@
       import = [ pkgs.alacritty-theme.alabaster_dark];
       env.TERM = "xterm-256color";
       font = {
-        size = 11.0;
+        size = 9.0;
         normal = {
           family = "Hack Nerd Font Mono";
           style = "Regular";

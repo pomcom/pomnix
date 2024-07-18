@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-  #tuxi
   environment.systemPackages = [
 
     pkgs.xorg.xf86videoamdgpu
@@ -15,7 +14,7 @@
     pkgs.i3lock-fancy
     pkgs.wmctrl
     pkgs.volumeicon
-    #   pkgs.linuxKernel.packages.linux_6_5.vmware
+    # pkgs.linuxKernel.packages.linux_6_5.vmware
     # pkgs.linuxKernel.packages.linux_5_15.tuxedo-keyboard
     pkgs.virt-manager
     pkgs.vagrant
