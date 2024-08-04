@@ -34,6 +34,7 @@
       PATH = "$PATH:$HOME/go/bin";
       GOPATH = "$HOME/go";
       GTK_THEME = "Orchis-Grey-Dark-Compact";
+      MANPAGER = "nvim +Man!";
     };
 
     initExtra = ''
