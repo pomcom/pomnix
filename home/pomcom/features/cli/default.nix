@@ -10,6 +10,9 @@
 
   home.packages = with pkgs; [
 
+
+    bottles
+
     ranger
     mc
     fd

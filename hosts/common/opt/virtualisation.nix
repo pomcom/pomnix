@@ -1,13 +1,14 @@
 { pkgs, ... }:
 
-
-/* environment.packages = with pkgs; [ */
-/*   docker-compose */
-/**/
-# podman-tui
-/* ]; */
-
 {
+
+ environment.systemPackages = [ 
+   
+   pkgs.distrobox
+   pkgs.boxbuddy
+   pkgs.podman-tui
+ ]; 
+
   virtualisation = {
 
     docker.enable = true;

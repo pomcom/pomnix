@@ -23,21 +23,26 @@
   };
 
   systemd.user.startServices = "sd-switch";
+  systemd.user.targets.tray = {
+    Unit = {
+      Description = "Home Manager System Tray";
+      Requires = [ "graphical-session-pre.target" ];
+    };
+  };
 
   programs = {
     home-manager.enable = true;
     git.enable = true;
-    zsh.enable = true;	
-
+    zsh.enable = true;
   };
 
   home = {
     username = lib.mkDefault "pomcom";
-   
 
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "22.05";
 
   };
+
+
 }
- 

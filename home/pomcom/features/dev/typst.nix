@@ -4,6 +4,7 @@
     typst
     typstfmt
     typst-live
-    typst-preview
+#    typst-preview
+    tinymist
   ];
 }

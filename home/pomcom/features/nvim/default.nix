@@ -67,7 +67,7 @@
           texlab.enable = true;
           typst-lsp.enable = true;
           yamlls.enable = true;
-          rnix-lsp.enable = true;
+          rnix-lsp.enable = false;
           tsserver.enable = true;
         };
 

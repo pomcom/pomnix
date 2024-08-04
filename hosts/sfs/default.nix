@@ -29,6 +29,13 @@
     enable = true;
   };
 
+  # services.flatpak.enable = true;
+  #
+  # xdg.portal = {
+  #   enable = true;
+  #   wlr.enable = true;
+  # };
+
   services.greetd.settings.default_session.user = "pomcom";
 
   networking.hostName = "sfs";

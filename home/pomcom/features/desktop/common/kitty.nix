@@ -1,9 +1,6 @@
 { config, lib, pkgs, ... }: {
 
-
-
   home.packages = with pkgs; [
-    termpdfpy
     pixcat
     nnn
     presenterm

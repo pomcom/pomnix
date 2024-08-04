@@ -6,6 +6,7 @@
     vivaldi
     google-chrome
 
+    bambu-studio
     gitkraken
 
     okular
@@ -13,7 +14,6 @@
     pdfchain
 
     spotify
-    onedrive
 
     texlive.combined.scheme-full
     texmaker
@@ -22,11 +22,13 @@
 
     # citrix_workspace
 
-    gnome.nautilus
+    nautilus
     gparted
-    gnome.gnome-disk-utility
+    gnome-disk-utility
 
     cryptomator
+
+    zed-editor
 
   ];
 }
